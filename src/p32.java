@@ -1,3 +1,22 @@
+/*****
+ * We have two solutions towards this problem, one is using DP and traverse backwards, one is using stack and traverse forward
+ * For the DP: we use an array D to record the max length of parentheses in the substring that start with i. So if String.charAt(i) = ')'
+ * then it will be 0, if it is '(', then we need check the index after D[i+1]. i -> ( (....) <-D[i+1] )<--the one that we want to check,
+ * lets say it is j. if j is '(', then we know this length is 0, since we can't close it(because D[i+1] is the max length in next index,
+ * so we know that j+1 and its following array is not a valid max length array), if it is ')', then we can simply let D[i] = D[i+1] +2,
+ * Additionally, in this case, if j+1 != s.length -1, then we may got more consecutive parentheses after it, so we need let D[i]= D[i+1]+2+D[j+1]  
+ * 
+ * For the stack: it is much simpler, we have stack record the index of unmatched parentheses. if the input if '(', then we just push it 
+ * to stack, if the input is ')', then we check the top of stack. If the stack.peek() return the index of ')', then it is still unmatched,
+ * we just push the input into stack, otherwise if the stack.peek() return the index of '(', then we know, we have a closed match. we just
+ * pop the top on stack 
+ * Here comes two cases, if the stack becomes empty, then we know i index is a clear index, which means all parentheses before it are all matched
+ * so we just make result = i+1 (+1 means, i is index, we need calculate the real number, also because all parentheses before i are matched, we know
+ * this result should be largest number so far). else if the stack still has elements remain, then current length is stack.peek() - i, which means 
+ * we will get the length between last unmatched parentheses and current i, which should gives us the length of valid parentheses. In this case,
+ *  we dont whether the length is longer than the one we got before, so we use Math.max() to update result.
+ */
+
 import java.util.HashMap;
 import java.util.Stack;
 
