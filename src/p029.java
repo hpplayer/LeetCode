@@ -6,7 +6,7 @@
  * @author hpPlayer
  *
  */
-public class p29 {
+public class p029 {
 	/*
 	 * use bit shift. << means * 2, >> means /2 << AbsDivisor multiple times
 	 * (assume n times) to get the maximum number before AbsDivident record the

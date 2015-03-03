@@ -24,7 +24,7 @@ import java.util.Stack;
  * Parentheses usually use stack!
  * 
  */
-public class p32 {
+public class p032 {
 	public static void main(String[] args) {
 		//String a = "(";
 		 //String a = "()(()";

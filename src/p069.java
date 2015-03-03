@@ -1,4 +1,4 @@
-public class p69 {
+public class p069 {
 
 	public static int sqrt(int x) {
 	

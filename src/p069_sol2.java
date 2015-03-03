@@ -6,7 +6,7 @@
  * 			(3) for the while case of binary search, remember the condition that jump out of loop is right > left, the case left == right 
  * 			should still in the loop!!!!!
  */
-public class p69_sol2 {
+public class p069_sol2 {
 	public static void main(String[] args) {
 		// System.out.println(sqrt(183692038));
 		System.out.println(sqrt2(2));
