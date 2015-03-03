@@ -74,7 +74,7 @@ public class p032 {
 					res = i+1;//all previous elements are matched, index +1 = num of Parentheses
 				else//we need to know how long is matched
 					res = Math.max(res, i-stack.peek());
-			}else{//uf arr[i] == '('
+			}else{//if arr[i] == '('
 				stack.push(i);
 			}
 		}

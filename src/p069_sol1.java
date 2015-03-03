@@ -1,4 +1,4 @@
-public class p069 {
+public class p069_sol1 {
 
 	public static int sqrt(int x) {
 	

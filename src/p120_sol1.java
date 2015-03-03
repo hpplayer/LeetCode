@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class p120 {
+public class p120_sol1 {
 	public static void main(String[] args) {
 		List<Integer> inner1 = new ArrayList<Integer>();
 		inner1.add(-1);

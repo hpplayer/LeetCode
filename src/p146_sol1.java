@@ -5,9 +5,10 @@
  * when we set a key that already stored in HashMap, it means we need to update the value, so we need do two things: update value and move
  * that node to the most recently accessed node. Here, we create two virtual nodes: head and tail, which we will never change the value. 
  * The node next to head node is the least recently used node, which we will remove if size is full, the node in front of tail is the most
- * recently used node, whenever we add a new node, get a node or update a node, we need do this operation on that node. The creation of head
- * and tail node will make us code easier since we don't need to check null case when handle operations on nodes as long as these nodes are
- * not tail or head
+ * recently used node, whenever we add a new node, get a node or update a node, we need do this operation on that node. 
+ * Notice: 
+ * The creation of head and tail node will make us code easier since we don't need to check null case when handle operations on nodes as long as these nodes are
+ * not tail or head (using dummy head and tail will be a plus in the interview!!!)
  * 
  * 
  * 
@@ -15,7 +16,7 @@
 
 import java.util.HashMap;
 
-public class p146 {
+public class p146_sol1 {
 	private Node head;
 	private Node tail;
 	int size;
@@ -23,7 +24,7 @@ public class p146 {
 	HashMap<Integer, Node> LRU;
 
 	public static void main(String[] args) {
-		p146 test = new p146(2);
+		p146_sol1 test = new p146_sol1(2);
 		// System.out.println(head.value);
 		test.set(2, 1);
 		//System.out.println(test.get(2));
@@ -67,7 +68,7 @@ public class p146 {
 		tail.prev = node;
 	}
 
-	public p146(int capacity) {
+	public p146_sol1(int capacity) {
 		size = 0;
 		this.capacity = capacity;
 		LRU = new HashMap<Integer, Node>();

@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 /** 
+ * Best approach see 023_sol3, this approach is implemented when I thought min-heap's size is fixed to the initial capacity
+ * which turns out to be unbound in reality.
+ * 
  * this approach uses min-heap. Firstly, put the initial node of every node lists into the min-heap
  * then poll the min node, attach it to the output node. We need two pointers, one always points the head
  * the other one always points the tail, which will be changing until the end. Here we set the tail pointer
@@ -14,6 +17,7 @@ import java.util.PriorityQueue;
  * 
  * Notice:
  * MinHeap does not support null, so we need check if current Node is null before insert into heap
+ * Also, we cant create a PriorityHeap without size less than 1(i.e. priority(0, comparator) is not allowed)
  */
 public class p023_sol2 {
 
@@ -28,6 +32,9 @@ public class p023_sol2 {
 	                return (a.val - b.val);
 	            }
 	        });
+	        /*
+	         * not good, as our minHeap can be actually very large
+	         */
 	        for(ListNode node : lists){
 	            if(node != null){
 	                minHeap.offer(node);
