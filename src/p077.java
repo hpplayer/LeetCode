@@ -11,6 +11,13 @@ import java.util.List;
  * 3) Each time, when done DFS for one node, we need remove it from the array, so our DFS can continue 
  * 
  * 
+ * Correlation with Tree:
+ * DFS method:
+ * first part, check if reaches the boundary condition
+ * main loop: building nodes in the layer next to the "start" layer
+ * so, we add one node to the layer, using DFS search below,then delete it so it would not impact the DFS on next node in the same level 
+ * see comment below with "tree" notation
+ * 
  * @author hpPlayer
  * @date Mar 4, 2015 10:45:47 PM
  */
@@ -42,10 +49,12 @@ public class p077 {
 		}
 		
 		//remark, we use i to stand for the real number in combination, so its range should be [1, n]
+		
+		//tree: we are constructing a tree based on current Input(all nodes inside this tree is in same level
 		for(int i = start; i <= n; i++){//need i <= n, since our combination's largest number is n
-			ary.add(i);
-			DFS(n, k, i+1, ary, result);
-			ary.remove(ary.size()-1);//DFS done for this node, we change to next node
+			ary.add(i);//tree: we are adding one node to it
+			DFS(n, k, i+1, ary, result);//the next start point should be next index of current i...//tree: we are searching this node
+			ary.remove(ary.size()-1);//DFS done for this node, we change to next node//tree: we remove this node, so it would not impactffect next node
 		}
 	}
 }
