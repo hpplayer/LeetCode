@@ -5,6 +5,16 @@ import java.util.Arrays;
  * but after we build the tree for one of the duplicate, we just need to skip same elements and move to next new element(because those nodes
  * should give us same subtree which is redundant)...
  * 
+ * Remark:
+ * dont forget sort array, since this problem we have duplicates that may not close to each other and we need to gather them together
+ * Also, dont forget the reset the boolean[i] = false, after we have done DFS on i and removed it from currentList
+ * Other caution is I changed return type from list<list> to ArrayList<ArrayList<>>
+ * if it is allowed we just need to change every "arraylist" to "list" except the initiation(i.e.
+ *      List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<Integer> currArray = new ArrayList<Integer>();
+        )
+ *  
+ * 
  * Damn..I used hashset first to check the redundant before adding to the result, but it gives TLE...
  * It should be..as we have wasted several loops to build redundant tree which we should skip
  */
