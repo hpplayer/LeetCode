@@ -4,6 +4,9 @@ import java.util.HashSet;
 /**
  * this method should work..but dont know why it does not pass leetcode...reported time exceeds limit...
  * 
+ * maybe waste too much time to build redundant tree for duplicates, which will not be added to result set in the end,
+ * so we can should skip those duplicate in the beginning...
+ * 
  * @author hpPlayer
  * @date Mar 5, 2015 6:24:56 PM
  */

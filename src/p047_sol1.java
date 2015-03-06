@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-
+/**
+ * similar problem to p46...
+ * but after we build the tree for one of the duplicate, we just need to skip same elements and move to next new element(because those nodes
+ * should give us same subtree which is redundant)...
+ * 
+ * Damn..I used hashset first to check the redundant before adding to the result, but it gives TLE...
+ * It should be..as we have wasted several loops to build redundant tree which we should skip
+ */
 
 public class p047_sol1 {
 	public static void main(String[] args) {
