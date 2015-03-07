@@ -12,11 +12,18 @@ import java.util.List;
  * 4)We add string to result, as long as we dont have "(" and ")" left
  * 
  * Remark:
- * 1) by adding condition (right > left), we dont need to check if the left or right < 0
+ * 1) by adding condition (right > left), we dont need to check if the left or right < 0. We only add ")" when (right > left) means
+ * we are able to replace all "(" by ")" as long as right > left...This is awesome, its like we changing visiting Node from left to right
+ * as long as we have right > left, where current Node is the left or right child of its parent's node
  * 2) by passing string + ")" / "(" to its child the string is automatically back to original string after DFS is done,
  * no need to add/delete from StringBuffer or using substring()
  * 3) Another adv of this solution is that we dont need to change the original num of left, since our condition for adding "(" is
  * just when we have left >0...so it is guaranteed we have "(" in the head...
+ * 
+ * The order the sequence when input n is 3:
+ * ((())), (()()), (())(), ()(()), ()()()
+ * i.e. We always replace last "(" with ")" in each subtree(from left node to right node) as long as we have right >0 
+ * 
  * 
  * @author hpPlayer
  * @date Mar 6, 2015 1:04:08 PM
