@@ -1,5 +1,5 @@
 
-public class p125 {
+public class p125_sol1 {
 	public static void main(String[] args){
 		System.out.println(isPalindrome("a"));
 	}

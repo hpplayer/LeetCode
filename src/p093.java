@@ -75,7 +75,7 @@ public class p093 {
 		}
 		
 	}
-	
+
 	public static boolean isValid(String s){
 		//if(s.length() == 0 || s== null) return false;// s will not be null...so 
 		if(s.length() == 0) return false;
