@@ -24,6 +24,7 @@ import java.util.Stack;
  * 3) the use of "D" is very clever!
  * 4)DFS2() is the recurisve DFS, DFS() is the stack version of DFS
  * 5) the use of offsetX and offsetY is also clever, which makes code more readable and concise
+ * 6) dont forget the boundary case "null" and "board.length == 0"!!!! 
  * @author hpPlayer
  * @date Mar 10, 2015 2:52:59 PM
  */

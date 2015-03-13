@@ -2,16 +2,18 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 /**
- * BFS solution, almost same to DFS, except we are using a queue. But this change will not pass tests as shown "execution time limited"
- * error. Why? since when we are using BFS we may add duplicate element in the queue which has not been visited yet(i.e. still in the que
- * but not marked as "D"), so if we dont do anything then it will become node->marked "D" do BFS, que continue, duplicate node, which is
- * actually marked as "D" but we still treat it as "O" and do BFS on it, so it costs a lot of time.
+ * BFS solution, almost same to DFS, except we are using a queue. But this change will not pass tests as shown "execution time limited" error.
+ * Why? since when we are using BFS we may add duplicate element in the queue which has not been visited yet(i.e. still in the que
+ * but not marked as "D"), so if we dont do anything then it will become node->marked "D", do BFS on Node,...., que continue,....,
+ *  duplicate node, which is already marked as "D" but we still treat it as "O" and do BFS on it, so it costs a lot of time.
  * 
  * For the DFS, it still has the similar problem, but since it goes as deep as possible, duplicate problem will not be so serious
- * BFS, we always play around in same level or close level, so it has more server dupliate effects
- * To solve this, simply add an if-else case in each iteration check if we have visited that node before, if yes, jumpt the BFS on this node
+ * BFS, we always play around in same level or close level, so it has more server duplicate effects
+ * To solve this, simply add an if-else case in each iteration check if we have visited that node before, if yes, jump the BFS on this node
  * if not, we do bfs on it.
  * 
+ * Remark:
+ * It is better to make x,y to a Node class, if we need to manipulate a matrix
  * @author hpPlayer
  * @date Mar 10, 2015 3:34:54 PM
  */
