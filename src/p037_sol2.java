@@ -8,7 +8,22 @@ import java.util.List;
  * But It forgot the case that the DFS may also come from non-empty value.
  *
  * So when I changed DFS to boolean, my result will be incorrect, cuz we did not return boolean value from the case 
- * that non-empty node gives next DFS..
+ * that non-empty node gives next DFS.. If we do not handle the case, then it will become:
+ *   if(board[row][col] != '.'){
+ *	 	DFS(board, row+1, col);
+ *	  }
+ *	  ...
+ *	  return false
+ * DFS here return true, but no value return here, so it will return false, then all its parent node will return false, so it becomes
+ * incorrect. In the original solution given by the author, it set global variable found = true, then the last empty node will know 
+ * its time to end, then it will return, and its parent node will also know its time to end, then it will return...until the first
+ * node that call DFS. If our DFS begin with empty-node, then it will finish DFS when backtrack reaches it. If our DFS begin with 
+ * non-empty node, then it will continue finish DFS, which is actually end the DFS function, so DFS also ends here.
+ * 
+ * 
+ * In other solutions, we only look at empty elements, so it would not be a problem, since we only do DFS to those empty cases,
+ * Fater node must from empty case..
+ * 
  * @author hpPlayer
  * @date Mar 14, 2015 12:36:12 AM
  */
