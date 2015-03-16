@@ -28,6 +28,8 @@ public class p010_sol3 {
 	            }
 	        }else{//case our next char in P is "*"
 	        	//System.out.println("im here");
+	            //case if we can skip a*, ex: "a", "ab*", after "a" matched "b*"" and " " may not valid, but we DFS should be true
+	            //i.e. when do dfs on "b*", we may still come to this case that we dont use "b*", and both string becomes empty
 	           // if(isValidPair(s, p,indexInS,indexInP+2 )){//we can try case we can skip a*
 	                if(DFS(s, p, indexInS, indexInP+2)){
 	                //	System.out.println("im here");
