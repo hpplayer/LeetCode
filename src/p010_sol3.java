@@ -5,8 +5,8 @@
  */
 public class p010_sol3 {
 	public static void main(String[] args) {
-		String a = "a";
-		String b = "ab*";
+		String a = "aaba";
+		String b = "ab*a*c*a";
 		System.out.println(a.matches(b));
 		System.out.println(isMatch(a, b));
 	}
@@ -38,6 +38,11 @@ public class p010_sol3 {
 	            //}
 	            //we look at current indexInP and indexInS
 	            while(isValidPair(s,p,indexInS,indexInP)){//try different number
+	             	System.out.println(s);
+	             	System.out.println(indexInS);
+                	System.out.println(p);
+                  	System.out.println(indexInP);
+                	
 	                if(DFS(s, p, indexInS+1, indexInP+2)){//we are looking for different pair, start with use 1 a*, indexInS +1 since we have 
 	                //used indexInS in current pair with indexInP
 	                    return true;
