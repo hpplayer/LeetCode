@@ -17,13 +17,13 @@
  */
 public class p097_sol2 {
 	 public boolean isInterleave(String s1, String s2, String s3) {
-	        if(s1 == null || s2 == null || s3 == null) return false;
+		 if(s1 == null || s2 == null || s3 == null) return false;
 		     if(s1.length() + s2.length() != s3.length()) return false;
 		     boolean[][] matrix = new boolean[s2.length()+1][s1.length()+1];//we need create one box for 0,0 case
 		     matrix[0][0] = true;//all empty, it should return match
 		     //we set s1 as columns, and s2 as rows
-		     for(int i = 0; i <= s1.length(); i++){
-		    	 for(int j = 0; j <= s2.length(); j++){
+		     for(int i = 0; i <= s1.length(); i++){//i: columns
+		    	 for(int j = 0; j <= s2.length(); j++){//j: rows
 		    		 if(i > 0 && s1.charAt(i-1) == s3.charAt(i+j-1) && matrix[j][i-1]){
 		    			 matrix[j][i] = true;
 		    		 }
