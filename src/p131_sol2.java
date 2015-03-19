@@ -25,11 +25,13 @@ import java.util.List;
 public class p131_sol2 {
 	public static void main(String[] args){
 		//String s = "seeslaveidemonstrateyetartsnomedievalsees";
-		String s = "abcbcc";
+		String s = "ababababababababababababcbabababababababababababa";
 		p131_sol2 test = new p131_sol2();
+		/*
 		boolean[][] table = test.table(s);
 		boolean[][] table2 = test.table2(s);
 		System.out.println(table == table2);
+
 		for(int i = 0; i < table.length; i++){
 			for(int j = 0; j < table[0].length; j++){
 				System.out.print(table[i][j] + "         ");
@@ -44,11 +46,12 @@ public class p131_sol2 {
 			}
 			System.out.println();
 		}
-	//List<List<String>> result= test.partition(s);
+		*/
+	List<List<String>> result= test.partition(s);
 		//System.out.println(test.partition(s));
 		//for(List<String> ls : result){
 		//	System.out.println(ls);
-	//	}
+		//}
 	}
 	   public List<List<String>> partition(String s) {
 	        if(s == null || s.length() == 0) return null;
