@@ -6,10 +6,14 @@
  * current T in current S. 
  * 
  * For example, S: abcb, T:b 
+ * if current match: we can either use the match, so length i -1, length j -1 
+ * or we can don't use the match and we treat current node as none, so we put left value here as we have not had this node at all
+ * if current not match: we have no other choice, we put left value here as we have not had this node at all and hope our next node 
+ * can match this char in target
  * Our matrix:
  * 	 0 a b c b
  * 0 1 1 1 1 1 <-empty target string, each string that is non-empty will have 1 empty substring (wo would not have empty S string, so set (0,0) =1 would be fine)
- * b 0 0 1 1 2 <-in index 2, we have only 1 b in S, so we have one way to from T, in index 4, we have 2 b in S, we have two ways to form T
+ * b 0 0 1 1 2 <-in index 2, we have only 1 b in S, so we have one way to form T, in index 4, we have 2 b in S, we have two ways to form T
  * 	 ^ <-empty source string, we can do nothing, return 0 (except for empty string T, here we treat it has empty S has a empty substring that match empty T)
  * 
  * So the basic idea is when updating values in this matrix,
