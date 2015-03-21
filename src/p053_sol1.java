@@ -1,6 +1,8 @@
 import java.util.Arrays;
 /**
  * My original AC solution without additional help
+ * 1) using DP (we create an array to record the global max value so far stops in this index, then sort, then return the max value)
+ * 2) using iteration(we calculate the value of each substring, and return the max one)
  * 
  * @author hpPlayer
  * @date Mar 19, 2015 11:44:29 PM
