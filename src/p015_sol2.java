@@ -11,7 +11,7 @@ import java.util.List;
  * @date Mar 23, 2015 1:14:24 AM
  */
 
-public class p15_sol2 {
+public class p015_sol2 {
 	public List<List<Integer>> threeSum(int[] num) {
     	Arrays.sort(num);
     	HashSet<List<Integer>> hs = new HashSet();

@@ -10,7 +10,7 @@
  * @author hpPlayer
  * @date Mar 19, 2015 8:04:54 PM
  */
-public class p91_sol3 {
+public class p091_sol3 {
     public int numDecodings(String s) {
         if(s.length() == 0 || s == null) return 0;
         int[] dp = new int[s.length()];
