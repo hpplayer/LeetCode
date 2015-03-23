@@ -38,7 +38,7 @@ public class p015_sol1 {
     public List<List<Integer>> threeSum(int[] num) {
     	Arrays.sort(num);
     	List<List<Integer>> result = new ArrayList<List<Integer>>();
-    	for(int i = 0; i < num.length; i++){
+    	for(int i = 0; i < num.length; i++){//we can skip loop when i > num.length -2
     		if(i >=1 && num[i] == num[i-1]) continue;//skip i, if curr value is same with prev value
     		int currSum = num[i];
     		int start = i+1; 
