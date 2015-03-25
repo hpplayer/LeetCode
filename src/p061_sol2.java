@@ -5,15 +5,21 @@
  *1) we want to know the length of list, so we would know where to rotate the list
  *2) we want reach the tail and then attach the head to it to make the cycle
  *Cycle can make use easy to manipulate rotation, we can cut anywhere while still preserve the order
- *After formed the cycle, then we count where the pivotal is. The pivotal should be length - k if count from left.
- *Since our length for cycle does not count the tail node(we break the loop once reach tail and does not count yet),
- *so length here is actually 1 less than the real length. This is good, which means, after length-k moves, we will reach the node 
- *just before the pivotal. So we can set its next to null to cut the cycle, and pivotal will automatically become the head. Of course,
+ *After formed the cycle, then we count where the pivotal is. The pivotal should be length - k + 1 if count from left, while length - k
+ *will be previous node of pivotal node (or we can call the last node of first part)
+ *after length-k moves, we will reach the previous node of pivotal
+ *Ex. (1,2,3) k = 1, length =3, 3-1 =2 
+ *So we can set its next to null to cut the cycle, and pivotal will automatically become the head. Of course,
  *before the cut, we need to record the pivotal, and set it to head, then our rotation is done.
  *So smart!
  *
  *Remark:
+ *Count here(k) includes itself(ex: (123), k = 1 then we need rotate at 3 and results are 312)
+ *This algorithm can optimize the solution if k is very large
  *Here we treat k > n as k %n, since we allow rotate several rounds...
+ *It is also right if k <= n, so % is an amazing operation
+ *Remember the length after first loop is the actual length of list(at first I didnt figure it out, i thought it does not include the 
+ *tail, but it does)
  * @author hpPlayer
  * @date Mar 25, 2015 1:24:03 PM
  */
@@ -26,7 +32,7 @@ public class p061_sol2 {
 		a.next = b;
 		b.next = c;
 
-		ListNode curr = new p061_sol2().rotateRight(a, 2000000000);
+		ListNode curr = new p061_sol2().rotateRight(a, 1);
 		while (curr!= null) {
 			System.out.println(curr.val);
 			curr = curr.next;
@@ -49,10 +55,10 @@ public class p061_sol2 {
 			len ++;
 			p = p.next;
 		}
-		//loop breaks when we reach tail, but the length does not count the tail(tail node not through the loop)
+		//loop breaks when we reach tail, the len is the actual length 
 		p.next = head;//form a cycle;
 		n = n % len;//remove duplicate
-		System.out.println(5%3);//%: mod 
+		//System.out.println(len);//%: mod 
 		//len - n is the position if count forward
 		for(int i = 0; i < len - n; i++){//we are looking for the pivotal
 			p = p .next;
