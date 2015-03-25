@@ -14,7 +14,11 @@
  * Remark:
  * In my first try, I overlooked the condition that the start of loop may overlap with the start of whole path,
  * so our loop condition should be while rabbit != turtle, otherwise we will force rabbit and turtle move at least one step,
- * which will cause error 
+ * which will cause error
+ * In the main loop, we don't know if there exists a cycle in the loop, so we force rabbit and turtle starts the race, if they 
+ * will meet some steps later then there must be a loop. However in the nested loop that we are looking for the start of loop,
+ * we already know there exists a loop which may start from the start of the path, so we need to change our condition and look carefully
+ * of every possible node to find the start of cycle
  * @author hpPlayer
  * @date Mar 24, 2015 12:55:08 AM
  */
