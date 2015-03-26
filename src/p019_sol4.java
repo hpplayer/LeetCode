@@ -1,3 +1,4 @@
+
 /**
  * This approach uses n to control the deletion index.
  * What does it mean?
@@ -12,6 +13,19 @@
  * @date Mar 26, 2015 12:10:29 AM
  */
 public class p019_sol4 {
+	public static void main(String[] args) {
+		ListNode a = new ListNode(1);
+		ListNode b = new ListNode(2);
+		ListNode c = new ListNode(3);
+		a.next = b;
+		b.next = c;
+
+		ListNode curr = new p019_sol4().removeNthFromEnd(a,1);
+		while (curr!= null) {
+			System.out.println(curr.val);
+			curr = curr.next;
+		}
+	}
 	static class ListNode {
 		int val;
 		ListNode next;
