@@ -20,6 +20,8 @@
  *It is also right if k <= n, so % is an amazing operation
  *Remember the length after first loop is the actual length of list(at first I didnt figure it out, i thought it does not include the 
  *tail, but it does)
+ *
+ *sol3 is my modified algorithm same with sol2, but instead of using one pointer, I used two pointers...
  * @author hpPlayer
  * @date Mar 25, 2015 1:24:03 PM
  */
