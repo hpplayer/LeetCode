@@ -8,8 +8,7 @@
  * we may have arary like [1,1]. So the virtual ary
  * should at least have length > 1 (except for empty ary) 
  * 
- * If we only need to return the length, it can be even simpler, see sol2
- * (but this problem requires us change the array also, so useless)
+ * We have another simple approach see sol2
  * @author hpPlayer
  * @date Mar 26, 2015 3:06:14 PM
  */

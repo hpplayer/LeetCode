@@ -1,5 +1,8 @@
 /**
- * Only count 
+ * This algorithm counts the number of duplicate
+ * so the length of new non-duplicate ary must have length of A.length - count
+ * When we found a new non duplicate value, we just assign it to the tail of non duplicate array
+ * Very smart
  * @author hpPlayer
  * @date Mar 26, 2015 3:14:08 PM
  */
@@ -13,9 +16,9 @@ public class p026_sol2 {
     	int count = 0;
     	for(int i = 1; i < A.length; i++){
     		if(A[i] == A[i -1] ){
-    			count ++;
+    			count ++;//count the num of duplicates
     		}else{
-    			A[i-count] = A[i];
+    			A[i-count] = A[i];//return to the tail of current non duplicate part
     		}
     	}
     	return A.length - count;
