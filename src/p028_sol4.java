@@ -30,8 +30,9 @@ public class p028_sol4 {
 	
 	private static int[] buildNexttable(char[] pattern){
 		int table[] = new int[pattern.length]; 
-		table[0] = -1;//we dont have string before patter[0], and to distinguish this case with other cases like patter[i] = 0, we set it to j 
-		int prev = -1;//set it to -1 is meanining ful, so in later operation, we can use -1 to set unmatched table value to 1
+		//table[0] = -1;//we dont have string before patter[0], and to distinguish this case with other cases like patter[i] = 0, we set it to j 
+		table[0] = 0;//OMG set table[0] = 0 also works!, I used to think set it to -1 is a must! 
+		int prev = -1;//set it to -1 is meaningful, so in later operation, we can use -1 to set unmatched table value to 0
 		int post = 0;
 		while(post < pattern.length -1){//post is the loop pointer, we have set table value at 0 to -1, so we only needs update length -1 times
 //Like described before, if we are reseting prev pointer to head, then prev == -1 will force loop fill 0 to the corresponding table value

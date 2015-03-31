@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 /**
  * Purely recursive search, generate from 1 to kth number, the solution is supposed to be right, but will cause TLE error
+ * 
+ * A smarter and math optimized way, please ref to sol2
  * @author hpPlayer
  * @date Mar 30, 2015 11:52:56 PM
  */
