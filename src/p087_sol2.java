@@ -31,16 +31,23 @@ public class p087_sol2 {
 			}
 		}
 		//k: string length from i or j, so i + k must < len
+		/* The meaning of this four nested loops is:
+		 * we check each substring of length k in s1 and s2 to see if it is scramble, say it is stored in v1
+		 * Next time when we are checking some other substring that use v1, we also check the the remaining part of that 
+		 * substring (the other part in normal order or reverse order), if both true, then fill v2 with true
+		 * i and j can start anywhere before len - k (cuz we are checking substring s1 and s2 of length k), and obviously, we have k ways 
+		 * to split those substrings in k ways, that is there are at most k ways to scramble them.
+		 */
 		for(int k = 1; k <len; k++){//k = 0 col has been filled
 			for(int i = 0; i < len - k; i ++){
 				for(int j = 0; j < len - k; j++){
 					for(int p = 0; p < k; p++){//split into 0 to p and p+1 to k
 						/* we have 0--p, p+1--k
-						 * i:p:- k-p:-----
-						 * j:p:- k-p:-----
+						 * i:(p):- (k-p):-----
+						 * j:(p):- (k-p):-----
 						 * normal order: first part: compare i + p and j+ p and second part: compare j + p + 1 + (k-p-1) and i+p+1 + (k-p-1)<--possible increment from p+1 to k
-						 * i:p:- k-p:-----k
-						 * j:k-p:----- p:-k
+						 * i:(p):- (k-p):-----k
+						 * j:(k-p):----- (p):-k
 						 * swapped order: first part: compare i + p and j+ k-p + p and second part: i + p + 1 + (k-p-1) and j + (k-p-1) <-- possible increment from 0 to k-p-1 
 						 */
 						if((dp[i][j][p] && dp[i+p+1][j+p+1][k-p-1]) || (dp[i][j+k-p][p]&&dp[i+p+1][j][k-p-1])){//normal order and swapped order

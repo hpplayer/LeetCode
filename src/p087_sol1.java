@@ -22,6 +22,10 @@ import java.util.HashMap;
  * Instead, using new String().equals will be much faster (around 260 ms)
  * Or using Arrays.equals(s1, s2) is also faster (around 260 ms)
  * 
+ * For the equals():
+ * array1.equals(array2) will simply do array1 == array2
+ * String1.equals(String2) will compare each character
+ * Arrays.equals(array1, array2) will compare each element array, one by one 
  * @author hpPlayer
  * @date Mar 28, 2015 12:00:27 AM
  */
@@ -29,6 +33,11 @@ import java.util.HashMap;
 public class p087_sol1 {
 	public static void main(String[] args){
 		//System.out.println(isScramble("abcdefghijklmn", "efghijklmncadb"));
+		char[] a = {'a', 'b'};
+		char[] b= {'a', 'b'};
+		String sa = "ab";
+		String sb = "ab";
+		System.out.println(sa.equals(sb));
 		System.out.println(isScramble("ab", "ba"));
 	}
     public static boolean isScramble(String s1, String s2) {
