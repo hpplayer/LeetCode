@@ -10,7 +10,7 @@ import java.util.Set;
  * Like using cache to indicate if two strings can be transformed through some sequences, checking current sequence length with 
  * known shortest length so far, if already longer, stop and return immediately and the most important optimization that we 
  * check if any of 26 variants of current string is in set, if yes, then do DFS on it, which will be much faster than directly search
- * all strings in set and check if each string can be connected with current string (if set size >> 26, then this will be a great
+ * all strings in set and check if each string can be connected with current string (if set size >> 26* string.length(), then this will be a great
  * optimization)
  * This is because using DFS approach, we must traverse all paths in the Set to know the shortest one. So
  * if the set is large, there is inevitable long time to run the code. 
