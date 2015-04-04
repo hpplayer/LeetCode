@@ -62,6 +62,7 @@ public class p126_sol2 {
         				//String temp = sb.toString();
         				if(temp.equals(s)) continue;
         				if(temp.equals(end)){//found node before end
+        					System.out.println("im here");
         					list.add(s);//add it into the list 
         					flag = true;
         				}else{

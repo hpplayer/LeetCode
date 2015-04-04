@@ -34,7 +34,6 @@ public class p160 {
 			lenB++;
 		}
 		int offset = 0;
-		if(fast != slow) return null;
 		if (lenB > lenA) {
 			offset = lenB - lenA;
 			fast = headB;

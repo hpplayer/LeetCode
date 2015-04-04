@@ -83,6 +83,7 @@ public class p126_sol1 {
 						sb.setCharAt(i, c);
 						String temp = sb.toString();
 						if(temp.equals(end)){
+							//System.out.println("im here");
 							Node endNode = new Node(temp, n.level +1);
 							endNode.prevs.add(n);
 							flag = true;
@@ -113,6 +114,7 @@ public class p126_sol1 {
 			}
 		
 		}
+		//System.out.println(map.get(end).prevs.size());
 	}
 	List<List<String>> Result = new ArrayList<List<String>>();
 	public void buildPath(Node n, List<String> path){
