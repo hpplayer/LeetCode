@@ -11,7 +11,7 @@ public class p053_sol2 {
         int length = A.length;
         int dp = A[0];
         int result = A[0];
-        for(int i = 1; i < length; i++){
+        for(int i = 1; i < length; i++){//dont forget the array start with 1, since we have added A[0] to our scope before the loop
             dp = Math.max(dp + A[i], A[i]);//current Max
             result = Math.max(result, dp);//overall Max
         }

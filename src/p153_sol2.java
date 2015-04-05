@@ -21,6 +21,18 @@
  * so a better way to avoid this is check whether num[mid] > num[end] and num[mid] < num[start]
  * if num[mid] > num[end], it means right part is rotated, and we can skip num[mid] (cuz mid already > end), 
  * if num[mid] < num[start], it means left part is rotated, and we can consider num[mid] (ciz mid < start)
+ * 
+ * We can also think in this way:
+ * we have 3 elements: 1, 2, 3 
+ * it may rotate 0 time, so we have 1 2 3
+ * it may rotate 1 time, so we have 2 3 1
+ * it may rotate 2 time, so we have 3 1 2
+ * it may rotate 3 time, so we have 1 2 3....
+ * for case 0, 123, we simply return the leftmost node
+ * for case 1  231, we check if mid > right or mid > left
+ * for case 2  312, we check if mid < left or mid < right
+ * (proven on Leetcode, either combination is ok)
+ * no other possibilities..
  * @author hpPlayer
  * @date Apr 4, 2015 12:15:17 AM
  */
