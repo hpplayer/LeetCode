@@ -1,4 +1,14 @@
 import java.util.Arrays;
+/*
+Permutations
+
+Given a collection of numbers, return all possible permutations.
+For example,
+[1,2,3] have the following permutations:
+[1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], and [3,2,1].
+ */
+
+
 /**
  * This is KMP algorithm that can reduce the time complexity to O(n+k), where n is size of haystack, k is size of needle
  * Build array k, visit char in haystack n

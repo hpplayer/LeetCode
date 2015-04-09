@@ -1,4 +1,19 @@
 import java.util.HashMap;
+/*
+message containing letters from A-Z is being encoded to numbers using the following mapping:
+
+'A' -> 1
+'B' -> 2
+...
+'Z' -> 26
+Given an encoded message containing digits, determine the total number of ways to decode it.
+
+For example,
+Given encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).
+
+The number of ways decoding "12" is 2.
+*/
+
 /**
  * Recursive way.. the main idea is right, but it does not handle the special case properly
  * i.e. 0 case, if we have 150 then it can not be parsed

@@ -18,13 +18,13 @@ public class p091_sol3 {
         
         for(int i = 1; i < s.length(); i++){
         	if(s.charAt(i) != '0'){
-        		dp[i] = dp[i-1];
-        	}else{
+        		dp[i] = dp[i-1];//use this char as single char, there is only one way to connect with previous bit, so dp[i] = dp[i-1]
+        	}else{//single char range from 1 to 9, so when single char == '0', it is invalid
         		dp[i] = 0;
         	}
         	
         	if(canPair(s.substring(i-1, i+1))) 
-        		dp[i] += (i > 1? dp[i-2] : 1);//if second index can pair with first index, we manually add 1
+        		dp[i] += (i > 1? dp[i-2] : 1);//when i - 2 < 0, if second index can pair with first index, we manually add 1
         }
         return dp[s.length()-1];
     }

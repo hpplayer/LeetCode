@@ -2,6 +2,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+/*
+Letter Combinations of a Phone Number 
+
+Given a digit string, return all possible letter combinations that the number could represent.
+A mapping of digit to letters (just like on the telephone buttons) is given below. (picture is same as normal phone number panel)
+Input:Digit string "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+*/
+
 /**
  * Another problem that I worked without help, and my original solution is 99% correct.
  * My original solution should work, but I don't know the exact test cases in the leetCode, so I failed in first attempts.
