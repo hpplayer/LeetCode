@@ -1,5 +1,17 @@
 import java.util.HashMap;
-
+/*	Unique Binary Search Trees 
+ * 
+ *  Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
+ *	For example,
+ *	Given n = 3, there are a total of 5 unique BST's.
+ *  1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
+ * 
+ * 
+ */
 /**
  * I got the idea that each tree has following properties:
  * left subtree is from somewhere to mid-1, right tree is from mid+1 to somewhere
@@ -17,19 +29,7 @@ import java.util.HashMap;
  * @date Apr 8, 2015 11:35:52 AM
  */
 
-/*	Unique Binary Search Trees 
- * 
- *  Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
- *	For example,
- *	Given n = 3, there are a total of 5 unique BST's.
- *  1         3     3      2      1
-    \       /     /      / \      \
-     3     2     1      1   3      2
-    /     /       \                 \
-   2     1         2                 3
- * 
- * 
- */
+
 public class p096_sol1 {
     public int numTrees(int n) {
         return DFS(1, n, new HashMap<String, Integer>());
