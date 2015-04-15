@@ -3,7 +3,7 @@
  * @author hpPlayer
  * @date Mar 25, 2015 6:54:16 PM
  */
-public class p61_sol3 {
+public class p061_sol3 {
 	static class ListNode {
 		int val;
 		ListNode next;
