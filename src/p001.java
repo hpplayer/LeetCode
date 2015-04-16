@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 
-public class p01 {
+public class p001 {
 	public static void main(String[] args){
 		ArrayList<Integer[]> result = twoSum(new int[]{3,3,2,2}, 5);
 		for(Integer[] intAry : result){
