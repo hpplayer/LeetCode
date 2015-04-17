@@ -23,10 +23,17 @@
  * Once we found the element's width is smaller than current width, we know this way comes to the end
  * 
  * Remark:
- * we must check the height start from input row to 0 or from input row to end of matrix, so we know the height will be consecutive otherwise 
- * we will break the loop once the width become smaller
+ * 1) we must check the height start from input row to 0 or from input row to end of matrix, so we know the height will be consecutive otherwise 
+ * If we only check one direction, it is very possible the width we pick currently is too big or too small, so height counting will stop
+ * in the mid, even we may have a mid width that cover those small or large width. 
+ * By check two direction, it is like we are able to pick the mid width so it can extend both direction.
  * 
+ * 2) we will break the loop once the width become smaller
+ * 3) Don't forget boundary case, like input matrix is "[]" (handled by if(matrix.length == 0) return 0;)
  * Time complexity = O(m*n) * O(m)
+ * 
+ * The approach that uses algorithm in p84 is in sol2
+ * The fastest approach is in sol3
  * @author hpPlayer
  * @date Apr 16, 2015 3:57:46 PM
  */
@@ -38,7 +45,7 @@ public class p085_sol1 {
 	}
 	
 	  public static int maximalRectangle(char[][] matrix) {
-	        if(matrix.length == 0) return 0;
+	        if(matrix.length == 0) return 0;//!!!!!!!dont forget boundary case
 	        int m = matrix.length, n = matrix[0].length;
 	        int[][] dp = new int[m][n];
 	        for(int i = 0; i < m*n; i++){
@@ -58,7 +65,7 @@ public class p085_sol1 {
 	                }
 	            }
 	        }
-	        
+	        //print new matrix
 	        for(int i = 0; i < dp[0].length; i++){
 	        	for(int j = 0; j < dp.length; j++){
 	        		System.out.print(dp[j][i] + " ");

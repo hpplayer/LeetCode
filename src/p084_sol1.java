@@ -2,11 +2,25 @@ import java.util.*;
 /*
 Largest Rectangle in Histogram
 (figures are in file p084)
-Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
-
-
+Given n non-negative integers representing the histogram's bar height where the width of each bar is 1,
+find the area of largest rectangle in the histogram.
+             6         
+         5   __   
+         __ |  |
+        |  ||  | 2    3
+ 2   1  |  ||  |     __
+ __     |  ||  | __ |  |
+|  | __ |  ||  ||  ||  |
+|  ||  ||  ||  ||  ||  |
 Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
-
+             6         
+         5   __   
+         __ |  |
+        |\\||\\| 2    3
+ 2   1  |\\||\\|     __
+ __     |\\||\\| __ |  |
+|  | __ |\\||\\||  ||  |
+|  ||  ||\\||\\||  ||  |
 
 The largest rectangle is shown in the shaded area, which has area = 10 unit.
 
