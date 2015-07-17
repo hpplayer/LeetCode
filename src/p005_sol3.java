@@ -25,6 +25,9 @@
  * finally, we just return the longest palindrome as solution.
  * 
  * details can be found below
+ * 
+ * Time complexity: O(n^2) (need fill all blanks in n*n matrix)
+ * Space complexity: O(n^2) (totally n*n blanks in matrix)
  * @author hpPlayer
  * @date Jul 7, 2015 5:36:02 PM
  */
