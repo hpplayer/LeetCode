@@ -14,7 +14,7 @@ public class p038_sol2 {
     public String countAndSay(int n) {
         if (n == 0) return "";
         StringBuilder temp = new StringBuilder();
-        temp.append(1);
+        temp.append(1);//still need  to set the initial case that n= 1, result = "1"
         for(int i = 1; i < n; i++){
             String s = temp.toString();//get prev string
             temp = new StringBuilder();//clear sb
