@@ -1,3 +1,12 @@
+/*
+Multiply Strings
+
+Given two numbers represented as strings, return multiplication of the numbers as a string.
+
+Note: The numbers can be arbitrarily large and are non-negative.
+*/
+
+
 /**
  * This is a pure math problem
  * We have to mimic the operations that we used to manually calculate the multiplication
@@ -5,7 +14,7 @@
  * 
  * This sol1 solution uses a very clever trick to do the operation, its idea is based on following observations:
  * 1) the total digits of result will not exceed the sum of total digits of two inputs. Based on this fact, we can create
- * an array to store our result
+ * an array to store our result. Example: 99 * 99 < 99 * 100, only 99*100 can make up to 5 digits. So 99*99 will only up to 4 digits
  * 2) we can reverse the inputs so we can fill the array with reverse inputs which means the next index in array is acutally 
  * the previous index in the result. It will help us to deal with carries later
  * 3) we can firstly store raw multiplication result in the array, then deal with carry and mod
