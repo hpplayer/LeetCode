@@ -10,7 +10,15 @@ class Solution:
                 for a in self.diffWaysToCompute(input[:i]) #a is first part b is second part
                 for b in self.diffWaysToCompute(input[i+1:])] or [int(input)] # in case input is pure digits, return it directly
 
-                
+    
+    
+    """It can be further simplified by using eval() function"""
+    def diffWaystoCompute(self, input):
+        return[eval('a' + c +'b') 
+               for i, c in enumerate(input)if c in "+-*"
+               for a in self.diffWaystoCompute(input[:i])
+               for b in self.diffWaystoCompute(input[i+1:])] or [int(input)]
+                   
 test = Solution()
 print(test.diffWaysToCompute("2-1-1"))
 

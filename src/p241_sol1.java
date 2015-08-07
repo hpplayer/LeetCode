@@ -16,6 +16,11 @@ import java.util.List;
  * A DP approach be found in sol2. But I have not understood it yet.
  * DP approach seems very complex, and there are little discussion about it online now. 
  * So I will come back if i undertand it.
+ * 
+ * Updated (Aug-7-2015):
+ * DP approach has been added as python version in sol3 and sol4
+ * DP approach does improve the speed but is hard to understand and code
+ * So for this problem sol1 is more recommended
  * @author hpPlayer
  * @date Aug 6, 2015 7:02:18 PM
  */
