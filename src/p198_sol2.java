@@ -6,6 +6,7 @@
  * 2) not rob it, so its value should be max between robbing previous house or not robbing previous house
  * There in only one way to rob current house that is exclude previous house and rob current house
  * but there is two ways to not rob current house that is either robbing previous house or not
+ * In other words, not rob current house means we are free to choose rob/not rob prev one, so we pick the max one.
  * So there is that
  * 
  * Remark:
