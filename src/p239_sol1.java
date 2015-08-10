@@ -47,6 +47,10 @@ Hint:
  * But fortunately it got accepted.
  * 
  * More fantastic solution will come tomorrow!
+ * 
+ * Update:
+ * sol2 is updated, which uses a fantastic deque solution with O(n) time complexity
+ * sol3 is the python version of sol2
  * @author hpPlayer
  * @date Aug 10, 2015 1:08:23 AM
  */
