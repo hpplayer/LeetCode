@@ -58,6 +58,7 @@ public class p220_sol2 {
 			}
 			
 			long temp = (long) nums[i] - Integer.MIN_VALUE;//help convert every int to positive to avoid collision
+			//current value / bucket size will give us the numbers of bucket before us i.e. current bucket number 
 			long bucket = temp / ((long) t + 1);//+1 to avoid t he case t = 0 and make the divide error
 			if(hs.containsKey(bucket) || (hs.containsKey(bucket -1) && hs.get(bucket - 1) + t >= temp)
 				||( hs.containsKey(bucket + 1) && hs.get(bucket + 1 ) -t <= temp)){

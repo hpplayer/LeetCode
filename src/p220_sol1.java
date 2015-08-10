@@ -23,6 +23,9 @@ the difference between nums[i] and nums[j] is at most t and the difference betwe
  * we may get overflow problem if nums[i] + t > Integer.MAX_VALUE
  * so her we convert all int type to long type with cast
  * 
+ * sol2 uses a math way called bucketing
+ * sol3 is the python version of sol2
+ * 
  * @author hpPlayer
  * @date Aug 7, 2015 11:32:03 PM
  */
