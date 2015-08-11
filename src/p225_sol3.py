@@ -1,19 +1,22 @@
 import collections
 class Stack:
     # initialize your data structure here.
+    #everything declared here are object variable not class variable
+    #class variable all defined above __init__
     def __init__(self):
         self.q = collections.deque()
 
     # @param x, an integer
     # @return nothing
+    """ In deque of python, new elements are always added to the tail"""
     def push(self, x):
         self.q.append(x) #append value to the deque
         for _ in range(len(self.q) - 1):
-            self.q.append(self.q.pop())
+            self.q.append(self.q.popleft())
 
     # @return nothing
     def pop(self):
-        self.q.pop()
+        self.q.popleft()
 
     # @return an integer
     def top(self):
