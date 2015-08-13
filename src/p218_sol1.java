@@ -182,7 +182,9 @@ public class p218_sol1 {
     	}else{//reach boundary case that we only have one building now, create skyline for this building
     		LinkedList<int[]> temp = new LinkedList<int[]>();
     		temp.add(new int[]{buildings[left][0], buildings[left][2]});//add key point (left end point)
-    		temp.add(new int[]{buildings[left][1], 0});//add right end point with height 0
+    		//add right end point with height 0, this is very important as we can find where highest building stop
+    		//and dont need worry about our greedy max(h1, h2) will always return highest height
+    		temp.add(new int[]{buildings[left][1], 0});
     		return temp;
     		}
     }

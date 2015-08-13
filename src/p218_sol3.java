@@ -25,6 +25,24 @@ import java.util.PriorityQueue;
  * que's top. That is because by doing that we avoid the case that clean-up may add a new result if found there is no longer highest 
  * height in the que, but actually we have which is our current building
  * 
+ * This algorithm looks like as long as we have consecutive tall buildings in the heap, our lower and dead(out of range) buildings will be kept
+ * in the heap
+ * Example:
+ * building 1: (1, 5, 5)
+ * building 2: (2, 15, 8)
+ * building 3: (6, 16, 9)
+ * In first loop, we found building 1, heap is empty, we add it into our heap and result (1,5)
+ * In second loop we found building 2, it starts before building 1 end so we add it into our heap and result (2, 8)
+ * now heap top is building 2 since its height > building 1's height
+ * In third loop we found building 3, it starts before building 2 ends, but actually at this moment building 1 has dead but we just keep it 
+ * there since we have consecutive buildings that some of them alive. 
+ * Anyway, we add building 3 into heap and result (6, 9)
+ * In fourth loop, we have reached the end of input matrix, but we got non-empty queue, so we need clear up queue
+ * Since the end point of building 3 is further than building 1 and building 2, we will pop all of them
+ * During the clearance x has been updated to building 3's right end point 16
+ * Now queue is empty, we add height 0 to 16 and add (0,16) to our result 
+ * We are done
+ * 
  * This algorithms scan all buildings, and only doing pop() and push() to heap which costs O(logn) in each scan
  * So the total running time is guaranteed to be O(nlogn) which is better than sol2
  * @author hpPlayer
