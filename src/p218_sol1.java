@@ -127,11 +127,16 @@ import java.util.LinkedList;
  * also regarding the speed sol1 is stable and fast
  * 
  * So so1 is the best solution!
- * sol3 is python version of sol1
- * sol4 is python version of sol2, though the conversion is complete, the submission to LeetCode reports LTE error. This may because 
+ * sol3 is another python solution using heap. Differed from sol2 that may not be stable in heap operation, sol3's running time
+ * is guaranteed to be O(nlogn). So sol3 is the best heap version while sol1 is the best divide-and-conquer version
+ * 
+ * sol4 is python version of sol1
+ * sol5 is python version of sol2, though the conversion is complete, the submission to LeetCode reports LTE error. This may because 
  * search, remove in heap is linear time, and we need remove() and heapify() on each right edge, so get LTE error.
  * Also in sol4, I used inner class, define complicate key function, etc.
- * sol5 is another python solution using heap
+ * sol6 is the python version of sol3 which runs faster than sol4
+ * 
+ * Considering the complexity and easiness of those solution, sol1 is still the best one
  * 
  * @author hpPlayer
  * @date Aug 12, 2015 12:21:33 AM
