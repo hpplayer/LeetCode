@@ -1,3 +1,13 @@
+/*
+Number of Digit One
+
+Given an integer n, count the total number of digit 1 appearing in all non-negative integers less than or equal to n.
+
+For example:
+Given n = 13,
+Return 6, because digit 1 occurred in the following numbers: 1, 10, 11, 12, 13.
+*/
+
 /**
  * This solution works in following way:
  * each number can be divided into three parts:
@@ -6,17 +16,17 @@
  * sub integers in n - (base - 1)*k
  * Example 335:
  * 335: base 100
- * 1)we have k=3, three (base - 1)
+ * 1)we have k=3, three (base - 1), i.e. 3 * countDigitOne(99)
  * 0-99, 
  * 100-199
  * 200-299
- * 2)extra one from integer start with 1
+ * 2)extra one from integer start with 1, i.e. 100
  * 100-199
- * 3)remaining integer 335- (base - 1)*3
+ * 3)remaining integer 335- (base - 1)*3, i.e.  countDigitOne(35)
  * 0-35
  * 
  * For part 2, it is easy to calculate the number, if first digit > 1, then we got 1 * base extra 1, if first digit = 1, then we 
- * got n-base + 1 extra 1, ex: n= 13, base = 1, we got 13 - 10 + 1 = 4 extra 1 they are 10, 11, 12, 13, for 11, the second one will
+ * got n-base + 1 extra 1, ex: n= 13, base = 10, we got 13 - 10 + 1 = 4 extra 1 they are 10, 11, 12, 13, for 11, the second one will
  * be counted when we scan the remainders
  * 
  * Basically, this algorithm processes current first digit by doing recursion on n-1 scope, then add extra ones with that first digits, 
