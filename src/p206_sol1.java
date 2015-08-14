@@ -40,7 +40,14 @@ public class p206_sol1 {
 			val = x;
 		}
 	}
-
+	/*
+	 * This algorithm works, because we are changing the list from bottom to top
+	 * assume we have reached the tail, and we back to the last second node,
+	 * we simply let this node.next.next points to this node, and let this node's next to null
+	 * That is how we reverse the pointer between two nodes
+	 * Since it is a bottom up change, our current change will not affect to the pointer that upper node points to current node
+	 * So each bottom up change will not affect pointer above thus will not affect changes above 
+	 */
 	public ListNode reverseList(ListNode head) {
 		if (head == null || head.next == null)
 			return head;// found new head
