@@ -9,6 +9,14 @@ import java.util.List;
  * sol2 uses the similar idea with another style, the main algorithm is similar
  * 
  * It seems python has more tricky ways to solve this problem, more python solution will be updated tomorrow!
+ * 
+ * Update:
+ * I checked python solution today, there is no general good algorithm in this problem
+ * sol3 is the python version of sol1
+ * sol4 builds a matirx or map that record the range, and update the tail of range if the number is consecutive
+ * sol5 uses the python's groupby function, which can not be used in Java
+ * 
+ * So among those solutions, sol1 and sol2 are more recommended
  * @author hpPlayer
  * @date Aug 16, 2015 1:06:28 AM
  */
