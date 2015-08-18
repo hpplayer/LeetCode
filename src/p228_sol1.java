@@ -1,5 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
+/*
+Summary Ranges 
+
+Given a sorted integer array without duplicates, return the summary of its ranges.
+
+For example, given [0,1,2,4,5,7], return ["0->2","4->5","7"].
+*/
+
 /**
  * This is my original AC solution without help
  * It seems there is no short-cut towards this problem in Java
