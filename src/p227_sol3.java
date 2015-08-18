@@ -3,6 +3,11 @@
  * Here we use a variable prev to record values among * and /, we will add prev to the result if current sign is + or -, which means 
  * current sign allows us to add the value to results. If current sign is * or /, we have to get the value from * and / expression
  * before add the prev to results
+ * 
+ * In this solution, we always look a valid number and sign before it, we will decide whether add previous values into result based on current
+ * sign, if it is +/-, then we are allowed to add prev to result if it is * or / that means we still have to update prev until we reach +/-
+ * or the end of string. Since we stop after number's last digit, we can easily update sign assigning current charAt(i)
+ * 
  * Example:
  * 1 - 5 * 6 /3 + 2
  * when look at 1: sign is +, we add prev 0 to our result, update prev to 1

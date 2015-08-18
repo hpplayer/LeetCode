@@ -127,7 +127,7 @@ import java.util.LinkedList;
  * also regarding the speed sol1 is stable and fast
  * 
  * So so1 is the best solution!
- * sol3 is another python solution using heap. Differed from sol2 that may not be stable in heap operation, sol3's running time
+ * sol3 is another heap solution using heap. Differed from sol2 that may not be stable in heap operation, sol3's running time
  * is guaranteed to be O(nlogn). So sol3 is the best heap version while sol1 is the best divide-and-conquer version
  * 
  * sol4 is python version of sol1

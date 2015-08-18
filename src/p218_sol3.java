@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
  * But differed from sol2 where we sort all edges, then scan edges, then use linear time to remove edges, which costs LTE in python
  * version, here we only use pop() and push() of heap.
  * 
- * What wo do is using a heap to keep live buildings. What is that? That means our buildings in the heap will always be covered by
+ * What we do is using a heap to keep live buildings. What is that? That means our buildings in the heap will always be covered by
  * some taller buildings, if we reach a gap where a new building start after the live buildings end, all those alive building will be dead
  * at least those who has shorter length than current highest building will die. We check our que, and kick out all buildings whose 
  * end point is before our current highest building's end point(which will also be kicked out at the same time)

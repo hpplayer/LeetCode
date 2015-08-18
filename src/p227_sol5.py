@@ -3,6 +3,10 @@ class Solution:
     """I dont know why, but python 2.x version will return different result for negative divison:
     like -3/2 will return -2 in leetcode, and return -1 in 3.x version, so I have to add extra if-else 
     to return the correct solution"""
+    """Update:
+        I found above problem is a bug in python 2.x which has been fixed in python 3.x
+        To fix the bug manually, we can simply use int(float(a)/b), when a/b < 0
+    """
     # @param {string} s
     # @return {integer}
     def calculate(self, s):
@@ -29,6 +33,8 @@ class Solution:
         if sign == '*':
             stack.append(stack.pop() * num)
         elif sign == '/':
+            stack.append(int(float(stack.pop())/num))
+            """
             s = stack.pop()
             a = 0
             if s*num < 0:
@@ -37,6 +43,7 @@ class Solution:
             else:
                 a = s / num
                 stack.append(a)
+            """
         elif sign == '+':
             stack.append(num)
         elif sign == '-':

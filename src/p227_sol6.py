@@ -20,10 +20,13 @@ class Solution:
             elif sign == '*':
                 prev = prev * curr
             elif sign == '/':
+                prev = int(float(prev) / curr)
+                """
                 if prev*curr < 0:
                     prev = -int(math.fabs(prev)/math.fabs(curr))
                 else:
                     prev = prev / curr
+                """
             else:
                 a = s / num
                 stack.append(a)
