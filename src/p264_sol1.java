@@ -32,6 +32,8 @@ Assume you have Uk, the kth ugly number. Then Uk+1 must be Min(L1 * 2, L2 * 3, L
  * So we can get three new ugly numbers: 1*2, 1*3, 1*5 
  * inserting the smallest one into the linkedlist
  * 
+ * The idea of building three new ugly numbers from 3 primes and using the smallest one actually can be parsed as a modified merge sort
+ * sol2 explain this algorithm in a better one, and sol2 can also be more easily understood, so sol2 is the best solution!
  * @author hpPlayer
  * @date Aug 19, 2015 8:23:01 PM
  */
