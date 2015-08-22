@@ -35,6 +35,12 @@
  * 3) Sometimes, head elements maybe identical for two or more sequences, in this case, we will pick all of them, so all sequences will be 
  * updated with new head elements
  * 4) Time complexity: O(n), Space complexity: O(n)
+ * 5) This algorithm uses a very smart technique to save space. We are supposed to use three lists to keep track of three sequences.
+ * But we observed that, each element in each sequence is composed of left part that is a created ugly number in ugly list and right part 
+ * the prime number of the sequence, so we can simply use three index pointers to keep track the change of left part to save spaces
+ * So, each time, when we insert the heading element in one sequence into the final ugly number list, we can just move index one step further 
+ * which means we will points to the next number in the ugly list, in other words points to the next left part, thus prime number * [ ++index]
+ * will give us the next heading element in that sequnce. Very smart technique!
  * 
  * So based on the clear idea, fast algorithm and concise code of sol2, sol2 is the best solution towards this problem!
  * @author hpPlayer
