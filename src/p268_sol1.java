@@ -12,11 +12,22 @@
  * if the sum1 = 0 + 1 + 2, sum2 = 0 + 2, then we know sum1 - sum2 = 1, 1 is the missing value
  * 
  * Sol2 uses a math technique to calculate the sum. This technique eliminates the need for first for loop, so should be faster
- * Sol3 is the python version of sol1
- * Sol4 is the python version of sol2
+ * Sol3 is the bit manipulation solution
+ * Sol4 is the python version of sol1
+ * Sol5 is the python version of sol2
+ * Sol6 is the python version of sol3
+ * 
+ * Time complexity of sol1,2,3 are all O(n)
+ * Space complexity of sol1,2,3 are all O(1)
  * 
  * Remark:
  * Since this problem is just posted, bit manipulation solution will be updated soon!
+ * 
+ * Update:
+ * Bit manipulation solution is updated as sol3
+ * 
+ * Both the mathematic and bit manipulating solution are very appealing solutions, both are recommended!
+ * 
  * @author hpPlayer
  * @date Aug 23, 2015 5:14:20 PM
  */

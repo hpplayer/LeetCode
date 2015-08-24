@@ -4,9 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        sum, sum2 = 0, 0
-        for num in range(0, len(nums)+1):
-            sum += num
+        sum, n= 0,  len(nums)
         for num in nums:
-            sum2 += num
-        return sum - sum2
+            sum += num
+        return (n+1) * (n+0)/2 - sum
