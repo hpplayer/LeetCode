@@ -14,12 +14,27 @@
  * 
  * Since we always search the half part and discard the other part, the best performance according to the quick sort is O(n)
  * However, in worst case, the time complexity will be O(n^2)
+ * The proof of the linear time complexity is very hard, and it is more like an algorithm class's HW, but we can ref attachment "Solution explained"
+ * to see the proof
+ * 
  * 
  * More details can be found below.
  * 
  * Remark:
  * 1) One more time, in-place swap will not work if we are doing the swap on one element (usually the boundary case), so be careful
  * 2) a heap sort algorithm can be found in sol2, and will be updated tomorrow!
+ * 
+ * Update:
+ * heap solution has been updated, but I don't think using heap to store the number is a good idea, since it will cost extra spaces
+ * My naive Arrays.sort approach will cost O(logN) in sorting so is the heap insertion and deletion. In plus, my naive solutin would't 
+ * cost extra space to store elements.
+ * 
+ * So based on the result, I believe Sol1 that using partitioning is more fantastic!
+ * 
+ * Sol2 is the heap sort solution
+ * Sol3 is the python version of sol1
+ * Sol4 is the python version of sol2
+ * 
  * @author hpPlayer
  * @date Aug 23, 2015 9:33:23 PM
  */
