@@ -1,4 +1,13 @@
 import java.util.HashMap;
+/*
+Implement Trie (Prefix Tree) 
+
+Implement a trie with insert, search, and startsWith methods.
+
+Note:
+You may assume that all inputs are consist of lowercase letters a-z.
+*/
+
 /**
  * My original solution stores string in each TrieNode, then I compare substring one char by one char in each operation.
  * So I got LTE error. Also, my thought about search(String word) is wrong. The problem requires us return true if there exists such word 
@@ -13,7 +22,8 @@ import java.util.HashMap;
  * Remark:
  * 1)The hashMap structure can be replaced by the array since we know each TrieNode will only have at most 26 children 
  * 2)This is not an algorithm problem, so there are not many solutions to it. Most solutions are very similar
- * 
+ * 3)Root Node itself is a blank node (like dummy node), all its function is its children, while other nodes though not listed here but can
+ * contains one char as its label
  * 
  * @author hpPlayer
  * @date Aug 25, 2015 6:36:31 PM
