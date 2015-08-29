@@ -73,16 +73,35 @@ Word Search II
  * space " " back to its original value when we are done with the DFS search
  * 
  * I will try convert it from recursive version to iterative version, stay tuned!
+ * 
+ * Update:
+ * Finally, I work out an iterative version of this problem, please see sol2
+ * 
+ * Sol3 is the python version of sol1.
+ * For some reasons, the raw translate of sol1 will get LTE in python version, so I have to modify it (mainly add 4 DFS calls instead of for loop DFS callss)
+ * To get AC
+ * 
+ * I still like my sol1 implementation. Easy-to-understand and elegant
+ * Of course sol1 is good too
  * @author hpPlayer
  * @date Aug 26, 2015 5:34:00 PM
  */
 public class p212_sol1 {
 	public static void main(String[] args){
+		
+		char[] a = {'a', 'a', 'a', 'a'};
+		char[] b = {'a', 'a', 'a', 'a'};
+		char[] c = {'a', 'a', 'a', 'a'};
+		char[][] board = {a,b, c};
+		String[] words = {"aaaaaaaaaaaa","aaaaaaaaaaaaa","aaaaaaaaaaab"};
+		
 		//TEST CASE 1 (test words with same starting alphabet)
+		/*
 		char[] a = {'a', 'b'};
 		char[] b = {'c', 'd'};
 		char[][] board = {a,b};
 		String[] words = {"ab","cb","ad","bd","ac","ca","da","bc","db","adcb","dabc","abb","acb"};
+		*/
 		
 		/* TEST CASE 1 (given sample test)
 		char[] a = {'o','a','a','n'};
@@ -173,9 +192,8 @@ public class p212_sol1 {
     			if(trie.searchPrefix(temp + "")){
     				board[i][j] = '\0';
     				List<String> ls = new ArrayList<String>();
-    				DFS(board, i, j, temp + "", trie, ls);
-    				board[i][j] = temp;
-    				result.addAll(ls);		
+    				DFS(board, i, j, temp + "", trie, result);
+    				board[i][j] = temp;	
     			}
     		}
     	}
