@@ -51,7 +51,9 @@ public class p209_sol2 {
 	        		}
 	        	}
 	        
-	        return result == Integer.MAX_VALUE? 0 : result;
+	      //actually, we can get avoid this check, since we know the total sum in the last cell of sum array
+	      //so we know the no-solution case will not happen if the value in that cell is >= given sum
+	        return result == Integer.MAX_VALUE? 0 : result; 
 	        }
 	        
 	    
