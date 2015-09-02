@@ -32,8 +32,11 @@ You may assume both s and t have the same length.
  * Sol2 lists another neat solution uses O(n) without HashMap
  * 
  * Remark:
- * Since the problem assumes two input strings have same length, we don't need extra check
+ * 1)Since the problem assumes two input strings have same length, we don't need extra check
  * Otherwise, we need to compare the length of two strings in the beginning
+ * 2)The reason that we need use two containers is because we need one-to-one relation in both two directions.
+ * Hashmap hs only record the relation in one direction while visited reports that if we have the relationship in other direction
+ * 
  * 
  * Sol2 uses less space and is much faster 
  * So sol2 is recommended

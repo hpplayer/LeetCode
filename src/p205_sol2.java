@@ -30,6 +30,10 @@
  * That means, we have found a new pair that map used "a" in string s to a unused "a" in string t
  * we will return false
  * 
+ * In sol2, we use two arrays to store the relationship in two directions. If we found two indexes stored in arrays are not same,
+ * that means we have used such character in another relationship (we don't need to know which direction got corrupted, as long as 
+ * they are not same, we will return false)
+ * 
  * This algorithm also uses O(n) time, but it uses less space as it only uses two array of length 256
  * 
  * So sol2 is more recommended
