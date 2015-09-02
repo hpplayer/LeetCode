@@ -2,7 +2,7 @@
  * This solution is very similar to sol3
  * We search in a range, then update the new search range based on search result of current range
  * "rightBound" is marked as the right bound of new search range which behaves like right in sol2
- * "Right" is the pointer that scan values in range, which behaves like the "int i" in for loop of sol2
+ * "pointer" is the pointer that scan values in range, which behaves like the "int i" in for loop of sol2
  * 
  * The jump from current search range to next search range is one step
  * Since our algorithm will count each search range as one step, so for boundary case like [0] or [1], we 
@@ -17,12 +17,12 @@ public class p045_sol3 {
         //oldRight is used to mark the search range
         //we will search all values in the range and found the rightmost index that we can reach
         //then let this index become the mark of new search range
-        int rightBound = 0, right = 0, step = 0;
+        int rightBound = 0, pointer = 0, step = 0;
         
         for(int i = 0; i < nums.length; i++){
-            right = Math.max(right, nums[i] + i);//update rightmost bound
+        	pointer = Math.max(pointer, nums[i] + i);//update rightmost bound
             //to skip following scans if current right already reach the tail
-            if(right >= nums.length - 1){
+            if(pointer >= nums.length - 1){
                 return step + 1;
             }
             //if the scanning bar has reached the oldRight, which means we have done search in current range
@@ -30,7 +30,7 @@ public class p045_sol3 {
             //the right bound of next range is the rightmost index we can reach from current range
             //we just mark the right bound by the rightmost index
             if(i == rightBound){
-                rightBound = right;
+                rightBound = pointer;
                 step ++;
             }
         }
