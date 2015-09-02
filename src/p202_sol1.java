@@ -71,8 +71,8 @@ public class p202_sol1 {
     }
     
     public boolean isHappy2(int n) {
-        if(n == 1) return true;
-        if(n == 4) return false;
+        if(n == 1) return true; //1 is included in happy number loop
+        if(n == 4) return false; //4 is included in unhappy number loop
         
         int sum = 0;
         while(n > 0){
