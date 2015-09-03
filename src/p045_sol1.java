@@ -35,6 +35,14 @@ The minimum number of jumps to reach the last index is 2. (Jump 1 step from inde
  * Our correct way is take index1, but use half of it to reach index[4], which gives 3,
  * then we use 3 there. So, this problem is actually not easy as it may looks like
  * 
+ * Remark:
+ * The greedy selection of values in cell may not return the longest jump
+ * We also need to consider about the index 
+ * In other words, the longest jump is composed of the index itself + the value in this cell
+ * My solution does not consider this sum
+ * In sol2, we calculate the longest jump based on index and value, and we always pick the 
+ * longest jump in each range, so it is greedy in this way, though it may not so "greedy" as my algorithm is
+ * 
  * In sol2 and sol3, we both search the array range by range to avoid repeat scan
  * Sol2 provides a BFS solution with is very decent
  * Sol3 uses a similar idea but different implementation
