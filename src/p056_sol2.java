@@ -34,6 +34,9 @@ import java.util.List;
  * temp lists will help exactly mimic the operations in merge-sort like creating a larger merged list, or creating a small split list
  * contains two intervals
  * 
+ * 3) During merge, we use "start" to decide the insert order, then use "end" and "start" to decide the right bound and whether we need to
+ * merge current interval and intervals already in the list 
+ * 
  * @author hpPlayer
  * @date Sep 3, 2015 3:45:12 PM
  */
