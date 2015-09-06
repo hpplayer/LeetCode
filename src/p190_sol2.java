@@ -90,11 +90,13 @@
  * 1) marker is very important in picking bits, but here we also need use left/right shifts to finish the swap operation
  * 2) 0x is the heading of hexadecimal
  * 3) f is 1111, a is 1010, c is 1100
+ * 3) I made a little mistake above. One byte is 8 bits. However, I assume one byte is 4 bits above.
  * @author hpPlayer
  * @date Sep 5, 2015 11:52:40 PM
  */
 public class p190_sol2 {
 	public static void main(String[] args){
+		System.out.println(1<<2);
 		System.out.println(new p190_sol2().reverseBits(43261596 ));
 	}
     public int reverseBits(int n) {
