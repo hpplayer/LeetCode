@@ -41,6 +41,9 @@ Return:
  * 
  * So sol3 is recommended
  * 
+ * Remark:
+ * There is one of the online solution that can further simplifies the code into a shorter one. But it requires you know the 
+ * hex representation of A/C/G/T first by lookup ASCII table, so it is not pratical in real interview and thus not list here
  * @author hpPlayer
  * @date Sep 6, 2015 8:26:51 PM
  */
