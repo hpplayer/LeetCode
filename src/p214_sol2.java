@@ -92,7 +92,7 @@ public class p214_sol2 {
             //if next char after matching string is not same with current char, then our matching string will not
             //continue grow, instead, we will shrink our matching string one step backward, to see if the previous 
             //char matches our current char.
-            //Of course, if the matching string has 0 lenth, there is no need to shrink it not even check it
+            //Of course, if the matching string has 0 length, there is no need to shrink it not even check it
             while(j > 0 && temp.charAt(j) != temp.charAt(i)){
                 //we have two strings, one start from index 0, one ends at current index
                 //j if treated as index, it will points to the end char of the left string
