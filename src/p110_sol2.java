@@ -66,6 +66,8 @@ public class p110_sol2 {
                 //if the current right child is null, we should already enter if above.
                 //so if we enter here, we guarantee current node's right is not null
                 //but for left, we may have reached the end, which is null now. So now need begin visit right
+            	//if now left == null, it means we have done the visit of left subtree, and we can go to right subtree
+            	//if now left != null and hs does not contain left, it means we have not done the visit of left subtree, so visit left subtree
                 if(left != null && !hs.containsKey(left)){
                     //if we enter here because left is not visited
                     stack.push(node);
