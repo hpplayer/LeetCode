@@ -10,6 +10,19 @@
  * XYZ - 1 = x * 26^2 + y * 26^1 + z * 26^0 - 1
  * then right shift y to right is just (XYZ - 1)/26 
  * 
+ * Let's take some example:
+ * 27 (AA):
+ * for 27, we firstly get (27-1)%26 = 0, which is 'A', this is the last digit, we then get (27-1)/26 = 1, which will be passed to next loop
+ * and get (1-1)/26 = 0, which is 'A', so our result would be AA
+ *  
+ * 52 (AZ):
+ * for 52, we firstly get (52-1)%26 = 25, which is 'Z', this is the last digit, we then get (52-1)/26 = 1, which will be passed to next loop
+ * and get (1-1)/26 = 0, which is 'A', so our result would be AZ
+ * Here we use the trick of pass (n-1)/26 to next loop instead of n/26, if we use n/26 then we will get 2, which will be passed to next loop
+ * and get (2-1)/26 = 1, which is 'B'.
+ * 
+ * This pass (n-1)/26 will save us from 1-based index problem, but is not easy to come up with!
+ * 
  * @author hpPlayer
  * @date Sep 7, 2015 10:35:27 PM
  */

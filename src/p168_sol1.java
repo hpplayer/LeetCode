@@ -45,6 +45,7 @@ For example:
  * 
  * In short words, we have to be careful with corner case multiplies of 26
  * 
+ * 
  * Sol1 is a long but easy-understanding solution
  * Sol2 is a short but hard-understanding solution using recursion
  * Sol3 is the iterative solution of sol2
@@ -55,8 +56,8 @@ For example:
  */
 public class p168_sol1 {
 	public static void main(String[] args){
-		int n = 1;
-		System.out.println(new p168_sol1().convertToTitle2(n));
+		int n = 52;
+		System.out.println(new p168_sol1().convertToTitle(n));
 	}
 	
     public String convertToTitle(int n) {
@@ -77,20 +78,5 @@ public class p168_sol1 {
         return sb.toString();
     }
     
-    public String convertToTitle2(int n) {
-        StringBuilder sb = new StringBuilder();
-        while(n > 0){
-            if ( (n%26) == 0){
-                sb.insert(0, 'Z');
-                n = n -1;
-            }else{
-                char c = (char) ((n-1)%26 + 'A');
-                sb.insert(0, sb.insert(0, c));
-            }
-            
-            n = n/26;
-        }
-        
-        return sb.toString();
-    }
+
 }
