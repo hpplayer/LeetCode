@@ -56,7 +56,7 @@ For example:
  */
 public class p168_sol1 {
 	public static void main(String[] args){
-		int n = 52;
+		int n = 53;
 		System.out.println(new p168_sol1().convertToTitle(n));
 	}
 	

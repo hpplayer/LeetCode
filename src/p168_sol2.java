@@ -23,6 +23,20 @@
  * 
  * This pass (n-1)/26 will save us from 1-based index problem, but is not easy to come up with!
  * 
+ * 
+ * Update:
+ * I found a good way to explain two (n-1) here
+ * The first (n-1) here is same as we discussed above, we use this trick to get corresponding values in char map (n-1)%26
+ * Each loop we will get a new (n-1)/26 and then parse the parameter of higher digits, (n-1)%26 is purely for the parse and will not 
+ * affect following loops
+ * The second (n-1) here is a trick. Our 26 based hex will only get one more digit if it is larger > 26
+ * So if current value is 26, n/26 will give 1, but we will not allow it to get one more digit. How to do that? simply let (n-1)/26
+ * Then we only numbers larger than 26 can get one more digit. Similarly, by using (n-1)/26, only value is larger than multiplies of 26, could
+ * we change the value of high bits like 53 = 26*2 + 1 = BA that starts with "B", while 52 = 26*2 is still AZ starts with "A"
+ * 
+ * Remark: it is not 27 hex.
+ * If it is 27 hex, then 53 will still be treated as same as other numbers < 53, as 53 < (27+27)
+ * But now we change the highest digit in 53. So it is still 26 based hex but with start of index 1
  * @author hpPlayer
  * @date Sep 7, 2015 10:35:27 PM
  */
