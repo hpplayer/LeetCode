@@ -7,6 +7,9 @@ import java.util.Stack;
  * curr = curr.right and start visit the right subtree
  * 
  * Remark:
+ * 1) remember to set prev only after we have done visit of left path, we won't check any node during the visit on left path
+ * 2) So all checks and update prev will occur when we done left path and start pop from stack
+ * 
  * if the tree is like 
  *    2
  *     \
@@ -17,7 +20,8 @@ import java.util.Stack;
  *  so prev 2 will firstly compare with 1, we found prev > curr, then they will be recorded as first and second
  *  then prev = 1, and visit 3, 1 < 3, they follow order, so we finally swap 2 and 1, and it would be our solution
  *  
- *  
+ * 3) recoverTree() is my own solution, while recoverTree()2 is other's solution
+ * I like my solution better since it keeps consistent with solution of my inorder traversal
  * @author hpPlayer
  * @date Sep 11, 2015 12:30:54 AM
  */
@@ -53,7 +57,36 @@ public class p099_sol2 {
 			val = x;
 		}
 	}
-    public void recoverTree(TreeNode root) {
+	
+	  public void recoverTree(TreeNode root) {
+	        if(root == null) return;
+	        
+	        Stack<TreeNode> stack = new Stack<TreeNode>();
+	        TreeNode p = root;
+	        TreeNode prev = null;
+	        TreeNode first = null;
+	        TreeNode second = null;
+	        while(!stack.isEmpty() || p != null){
+	            if(p != null){
+	                stack.push(p);
+	                p = p.left;
+	            }else{
+	                TreeNode t = stack.pop();
+	                if(prev != null && prev.val > t.val){
+	                    if(first == null) first = prev;
+	                    if(first != null) second = t;
+	                }
+	                prev = t;
+	                p = t.right;
+	            }
+	        }
+	        
+	        int temp = first.val;
+	        first.val = second.val;
+	        second.val = temp;
+	    }
+	  
+    public void recoverTree2(TreeNode root) {
         if(root == null) return;
         
         Stack<TreeNode> stack = new Stack<TreeNode>();

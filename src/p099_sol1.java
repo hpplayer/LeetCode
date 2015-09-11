@@ -42,7 +42,11 @@ A solution using O(n) space is pretty straight forward. Could you devise a const
  * We are building stack during the traversal, each stack will have max size of O(lgn) where we visiting the left path. So
  * this is not constant space solution. But the clearness and simpleness of this algorithm still makes sol1 a very great solution
  * 
+ * Sol1 provides a recursive solution, but use O(lgn) space
+ * Sol2 provides an iterative solution, which is very similar to sol1
+ * Sol3 provides a solution with Morris traversal, which only use constant space
  * 
+ * All of them are recommended
  * @author hpPlayer
  * @date Sep 10, 2015 11:39:19 PM
  */
