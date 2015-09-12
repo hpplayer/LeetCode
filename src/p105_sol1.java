@@ -32,6 +32,8 @@ You may assume that duplicates do not exist in the tree.
  * size and left subtree size. But I still keep all boundaries here to keep my solution consistent and clean
  * 2) the corner case is when the left boundary exceed the right boundary, we check it by ethier p > q or a > b
  * 3) The bottom case is when left == right, we know current subtree only has one node so we can just return node to speed up program
+ * 4) Now we use linear search to find the index of node in inorder[], which cost O(n) time, but we can optimize it by using a HashMap, which
+ * gives us O(1) search time
  * 
  * Sol1 is a very short and clean recursive solution
  * Sol2 is a complex iterative solution and it is extremely difficult to understand
