@@ -43,7 +43,10 @@ After calling your function, the tree should look like:
  * the left child of next node. Since we only need to visit each node in current layer and creat the link to next node in same layer
  * we can actually get rid of queue, please see sol2 for a such solution
  * 
- * People can also solve this problem through the recursive way, but extra stack space will be used so it is not recommended, but I still list
+ * Remark:
+ * 1)Since the problem states the input tree is perfect binary tree, each non leaf node will have two children and all leaf nodes are
+ * at same level, so the problem is not so tricky, a harder version can be found in p117
+ * 2)People can also solve this problem through the recursive way, but extra stack space will be used so it is not recommended, but I still list
  * it here, please ref to sol3
  * 
  * Sol1 is my own BFS solution which use extra non constant space
