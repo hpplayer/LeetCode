@@ -10,6 +10,9 @@ import java.util.*;
  * 
  * Since we always insert 1 in the end which costs O(1) compare with insert 1 in the front costs O(n), it should be much faster than sol1
  * 
+ * Remark:
+ * 1) arraylist.set(i, value) is constant time operation, so is the inserting new value in the end. So
+ * this algorithm should only takes O(kn) time
  * @author hpPlayer
  * @date Sep 12, 2015 11:25:40 PM
  */
