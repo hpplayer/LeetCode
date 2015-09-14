@@ -33,7 +33,8 @@ You may not engage in multiple transactions at the same time (ie, you must sell 
  * As I discussed above, we use two passes and each pass is only considering one transaction, which is not efficient
  * See sol2 for a better and more DP solution.
  * 
- * Both solutions are recommended.
+ * Both sol1 and sol2 are good solutions, but sol2 is more recommended as it is one pass algorithm, also the idea of sol2 can be 
+ * generalized to k transactions (p188)
  * @author hpPlayer
  * @date Sep 14, 2015 1:15:23 AM
  */
