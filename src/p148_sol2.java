@@ -11,7 +11,7 @@
  * 
  * The trick is how to find sublist and merge them
  * Here it uses a very smart way:
- * for split(): we find the tail of first sublist, store its next node, then ste tail.next= null, to make 
+ * for split(): we find the tail of first sublist, store its next node, then set tail.next= null, to make 
  * first sublist becomes a separated list, then return the next node, which should be start of second sublist
  * for merge(): we pass the node before current two sublists as the head, then do normal merge process to attach nodes to it,
  * since we add tail in each sublist in split(), so we can treat them as a simple merge two sort list problem, then we return the last node
@@ -67,26 +67,27 @@ public class p148_sol2 {
 		dummy.next = head;
 		ListNode left, right, tail;
 		for(int i = 1; i < length; i <<= 1){//*2, increase step two times each loop, which mimic the forward merge sort 
-			cur = dummy.next;
-			tail = dummy;
+			cur = dummy.next;//start Node of current sequences
+			tail = dummy;//last Node of previous sequences
 			while(cur != null){//split and merge to all sublists with i length each
 				left = cur;
 				right = split(left, i);//find the head of right which is ith step away
 				cur = split(right, i);//we will do merge two these right and left, so cur should skip left + right in next loop
-				tail = mergeTwoLists(left, right, tail);//merge two sublists
+				tail = mergeTwoLists(left, right, tail);//merge two sublists and find the last node of merged list
 			}
 		}
 		return dummy.next;
 	}
 
 	
-	public static ListNode split(ListNode head, int n){
+	public static ListNode split(ListNode head, int n){//n is current length of each sequence
+		//look for last Node of current sequence
 		for(int i = 1; i < n && head != null; i++){
 			head = head.next;
 		}
 		if(head == null) return null;
-		ListNode second = head.next;
-		head.next = null;//build tail of previous sublist of length n
+		ListNode second = head.next;//start Node of next sequence
+		head.next = null;//build tail of previous sublist of length n, i.e. cut the link between two seq, so we can reorder freely
 		return second;//return new head of next sublist
 	}
 	
@@ -107,6 +108,6 @@ public class p148_sol2 {
 	        while(cur.next != null){
 	        	cur = cur.next;
 	        }
-	        return cur; //return head of next sublist
+	        return cur; //return the last Node of current merged list
 	    }
 }

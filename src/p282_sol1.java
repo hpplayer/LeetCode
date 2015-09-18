@@ -51,8 +51,8 @@ Examples:
 
 public class p282_sol1 {
 	public static void main(String[] args){
-		String num = "2147483647";
-		int target = 2147483647;
+		String num = "1921474836681";
+		int target = -2147483648;
 		
 		System.out.println(new p282_sol1().addOperators(num, target));
 	}
