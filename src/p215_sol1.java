@@ -82,10 +82,13 @@ public class p215_sol1 {
                     nums[right] = nums[left] - nums[right];
                     nums[left++] -= nums[right--];
             }
-            if (nums[left] >= pivotal){
+            if (nums[left] >= pivotal){ 
                 //a larger number already in front of array, we just skip it
                 left ++;
             }
+            
+          //both start and end pointer can point to a number same with pivotal, if the other pointer points to a number that will not let that pointer move
+           //then we don't want this pointer stuck as well, so we would better move this pointer even pivotal == nums[right], and we will reorder duplicate in later partition.
             if (nums[right] <= pivotal){
                 //a smaller number already in back of array, we just skip it
                 right --;

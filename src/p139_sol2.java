@@ -8,7 +8,6 @@ import java.util.Set;
  * I used a HashMap to store the result of each substring.(Ex: String: "MyFavCat", dict contains "My", "Fav", so when checking My 
  * we already know Cat is not existed in the set, next time, when we try MyFav, we will directly return false, instead of checking the
  * set again) 
- * DIffered from sol1 that uses a 
  * @author hpPlayer
  * @date Mar 22, 2015 7:50:36 PM
  */

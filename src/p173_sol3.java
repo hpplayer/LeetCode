@@ -7,14 +7,29 @@ import java.util.Stack;
  */
 public class p173_sol3 {
 	
-	public class TreeNode {
+	public static class TreeNode {
 	    int val;
 		TreeNode left;
 		TreeNode right;
 		TreeNode(int x) { val = x; }
 	  }
-	 
-	public class BSTIterator {
+
+    public static void main(String[] args){
+    	TreeNode a = new TreeNode(2);
+    	TreeNode b = new TreeNode(1);
+    	TreeNode c = new TreeNode(3);
+    	a.left = b;
+    	a.right = c;
+
+    	BSTIterator sol = new BSTIterator(a);
+    	while(sol.hasNext()){
+    		System.out.println(sol.next());
+    	}
+    }
+    
+	public static class BSTIterator {
+		
+		
 	    Stack<TreeNode> stack;
 	    public BSTIterator(TreeNode root) {
 	        stack = new Stack<TreeNode>();
@@ -39,6 +54,8 @@ public class p173_sol3 {
 	            stack.push(temp);
 	            temp = temp.left;
 	        }
+	        
+	        System.out.println(stack.size());
 	        return result;
 	    }
 	}

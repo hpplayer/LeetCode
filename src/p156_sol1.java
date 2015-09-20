@@ -34,8 +34,9 @@ return the root of the binary tree [4,5,2,#,#,3,1].
  * Similar to reverse LinkedList, we can solve it by iterative and recursive solution
  * 
  * Remark:
- * The official solution can be found in CleanCode HandBook
- * 
+ * 1)The official solution can be found in CleanCode HandBook
+ * 2)A trick here is each time when we store an old variable, it implies we can update it immediately. So look at the code below, we found
+ * the flow is very smooth, we store a variable, then we will update in next step.
  * Sol1 is iterative solution
  * Sol2 is recursion solution
  * 
