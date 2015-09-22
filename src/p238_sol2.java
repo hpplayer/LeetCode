@@ -14,7 +14,7 @@ import java.util.Arrays;
  * 
  * productExceptSelf() is my favorite solution towards this problem
  * productExceptSelf2() also uses temp in the first loop.
- * productExceptSelf3() combines these two loops together but needs Arrays.fill() to initialize array default value to 0. So, the 
+ * productExceptSelf3() combines these two loops together but needs Arrays.fill() to initialize array default value to 1. So, the 
  * speed is actually not improved much. Plus this combined one loop solution is not so easy to understand as the other is.
  * 
  * So productExceptSelf() is the best solution!

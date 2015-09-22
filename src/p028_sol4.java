@@ -26,6 +26,10 @@ For example,
  * After got this array, whenever we found unmatched char in comparison, we can simply set the pointer in array to next[i], it means 
  * we dont need revert i - k index overtime, we can just set it to the value of next[i] which usually is smaller than i-k.
  * More detailed explantation, please see code below
+ * 
+ * Remark:
+ * Sol2 of Shortest Palindrome (p214) also uses the KMP algorithm, we can take it as reference
+ * 
  * @author hpPlayer
  * @date Mar 27, 2015 7:58:25 PM
  */

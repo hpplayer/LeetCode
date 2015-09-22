@@ -28,6 +28,9 @@ public class p075_sol2 {
         int zero = 0, two = nums.length - 1;
         //we just need to care about values before two, values after two are all sorted 2
         //two is the index before first 2, so we need visit it 
+        //This is like two-pointer problem, start pointer is i, end pointer is two
+        //our end condition is start pointer <= end pointer, here we have another pointer points to 0, so we need to check the
+        //last number as well
         for(int i = 0; i <= two; i++){
             if(nums[i] == 0){
                 swap(zero, i, nums); //we don't need recheck nums[i] since new nums[i] is updated to a cell we have been visited before

@@ -59,7 +59,8 @@ import java.util.Arrays;
  * j-- and j = table[j-1]. And j-- will fail in this last case. 
  * 
  * Remark:
- * Space complexity: O(n), Time complexity: O(n), so this KMP algorithm is very fast
+ * 1) sol4 of Implement strStr() (p28) also use a KMP algorithm, we can take it as a reference
+ * 2) Space complexity: O(n), Time complexity: O(n), so this KMP algorithm is very fast
  * 
  * @author hpPlayer
  * @date Aug 25, 2015 1:49:06 PM

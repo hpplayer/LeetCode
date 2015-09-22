@@ -8,7 +8,7 @@ import java.util.Arrays;
  * So it implies that later we need to scan the array backward so that lower citations will include papers from higher citations. 
  * Another question is we may have some papers have a very large citations, do we need to build an array based on this citation? The solution is no
  * Since our H index is the last index where citations > papers we will stop the scan when we found the first index that has paper >= citations.
- * Why no we return the index i instead of i + 1, i.e. why we dont't move the pointer back to the last index? Please see explanation below
+ * Why not we return the index i instead of i + 1, i.e. why we dont't move the pointer back to the last index? Please see explanation below
  * 
  * 
  * @author hpPlayer
