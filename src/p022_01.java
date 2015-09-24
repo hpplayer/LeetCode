@@ -1,5 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
+
+/*
+Generate Parentheses
+
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+For example, given n = 3, a solution set is:
+
+"((()))", "(()())", "(())()", "()(())", "()()()"
+*/
+
+
 /**
  * My one pass solution !
  * The algorithm is still using DFS. We give a count for left and right 

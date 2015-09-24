@@ -1,3 +1,11 @@
+/*
+Remove Element
+
+Given an array and a value, remove all instances of that value in place and return the new length.
+
+The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+*/
+
 /**
  * My AC solution without help, and the running time is very fast(almost reach the head!)
  * This is a two pointer algorithm, one pointer moves forward from head, one pointer move backward from tail
