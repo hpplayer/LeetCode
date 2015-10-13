@@ -12,9 +12,9 @@ import java.util.Deque;
  * By doing this, our deque will maintain a descending order, and the first index in the deque will always has the largest value's index
  * in current window
  * 2) Why store index instead of values? Since it is possible our deque size will be smaller than window as we only keep better potential 
- * candidate. If we only keep the values, there is now way that we can know the index of the values that needs to be removed. So keeping 
- * the index will be more convient
- * 3) This algorithm runs in O(n) time and is a good example to implement Deque, nice solutiuon!
+ * candidate. If we only keep the values, there is no way that we can know the index of the values that needs to be removed. So keeping 
+ * the index will be more convenient
+ * 3) This algorithm runs in O(n) time and is a good example to implement Deque, nice solution!
  * 
  * @author hpPlayer
  * @date Aug 10, 2015 4:12:23 PM

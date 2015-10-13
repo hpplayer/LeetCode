@@ -43,7 +43,7 @@ import java.util.List;
  * This problem can be solved with DFS and BFS. As described in the given hint, it is actually a topological sort problem.
  * A correct topological sort should have no loops. Here, if we found a loop in the sort, then we can report this course schedule 
  * cannot be done. Both BFS and DFS can be used to detect cycles in graph.
- * From my algorithm, I am familiar with using DFS to detect cycle, in which we will mark each node as visited after visiting this node, in
+ * From my algorithm course, I am familiar with using DFS to detect cycle, in which we will mark each node as visited after visiting this node, in
  * later DFS if we found the path direct us to a visited node, then there must be a loop. For BFS, we start from nodes without incoming edges
  * we will go layer by layer after remove all outgoing edges from above layer, after this process, if some nodes in current layer still have 
  * incoming edges, then those edges must coming from below edges. We are scanning our graph in topological order, so such case indicates there 

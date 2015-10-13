@@ -2,7 +2,7 @@
  * This is a very smart bit solution
  * In order to come up with this solution, we need to have two observations:
  * 1) 0 XOR any number = any number itself
- * 2) We know the ideal array has one element than the real array.
+ * 2) We know the ideal array has one element more than the real array.
  * Assume now our ideal and real array have same length, that means there is no missing element than, the XOR of two array
  * should return 0 as each element has its counterpart to get 0.
  * 

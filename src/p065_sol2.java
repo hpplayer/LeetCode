@@ -12,7 +12,7 @@
  */
 public class p065_sol2 {
 	public static void main(String[] args) {
-		System.out.println(new p065_sol2().isNumber(".2e81"));
+		System.out.println(new p065_sol2().isNumber("e9"));
 	}
     public boolean isNumber(String s) {
         int pointer = 0, dest = s.length();

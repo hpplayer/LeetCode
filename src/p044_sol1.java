@@ -1,3 +1,27 @@
+/*
+Wildcard Matching
+
+Implement wildcard pattern matching with support for '?' and '*'.
+
+'?' Matches any single character.
+'*' Matches any sequence of characters (including the empty sequence).
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch("aa","a") ¡ú false
+isMatch("aa","aa") ¡ú true
+isMatch("aaa","aa") ¡ú false
+isMatch("aa", "*") ¡ú true
+isMatch("aa", "a*") ¡ú true
+isMatch("ab", "?*") ¡ú true
+isMatch("aab", "c*a*b") ¡ú false
+
+*/
+
 /**
  * I firstly used recursive approach to do this problem, but got stack overflow error in running test code. 
  * I remember a problem before(p130) that also get the similar problem(it is LTE), that time I used stack instead to do the problem 
@@ -15,6 +39,8 @@
  * because we have matched all pairs in S and P, so we need to check if the remaining P is 0, if it is, then we are done, if not 
  * we will have two cases: p is ending with "*" or p is ending with non-* bit, the first case should return true, the second case
  * should return false; So we can use a while loop to check this condition.
+ * 
+ * 
  * @author hpPlayer
  * @date Mar 16, 2015 1:03:26 AM
  */

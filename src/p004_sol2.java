@@ -13,7 +13,7 @@
  * Checking: 
  * if A[i] is median, then in A there will be i-1 values < A[i]
  * Also, in B we will have exactly, n/2 - (i-1) values < A[i],
- * since the array is ordered, we will have B[i]<=A[i] <= B[j+1], where j = n/2 - (i-1).
+ * since the array is ordered, we will have B[j]<=A[i] <= B[j+1], where j = n/2 - (i-1).
  * 
  * findMedianSortedArrays() is the original implementation of MIT material with recursive way
  * findMedianSortedArrays2() is the optimized version with iterative way
@@ -73,7 +73,7 @@ public class p004_sol2 {
 					return (A[i] + Math.max(B[j], A[i - 1])) / 2.0;
 			}
 		}
-		return findMedianSortedArrays(B, A);
+		return findMedianSortedArrays2(B, A);
 	}
 
 	public static double helper(int[] A, int[] B, int left, int right) {

@@ -4,7 +4,8 @@
  * Example:
  * 1) a <= b <= c, then the total non negative profit is c - a = b -a + c - b
  * 2) a <= b >= c, then the total non negative profit is b -a (c-b is negative now, don't add it, we don't have a-c/c-a since the problem states
- * that no two transactions are overlapped, also b >= c, so the max positive profit we can make from buying at a, must be selling at b) 
+ * that we must sell a stock before buy it if we sell at b,then we will no longer hold this b, not alone sell at c,
+ * also b >= c, so the max positive profit we can make from buying at a, must be selling at b) 
  * @author hpPlayer
  * @date Sep 13, 2015 10:23:51 PM
  */

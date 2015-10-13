@@ -1,4 +1,10 @@
 import java.util.Arrays;
+/*
+ * Maximal Rectangle 
+ * 
+ * Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing all ones and return its area.
+ */
+
 /**
  * This DP algorithm works in this way:
  * When we calculate the area of rectangle, we can do with three variables,

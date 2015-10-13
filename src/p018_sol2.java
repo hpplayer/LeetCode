@@ -38,7 +38,7 @@ public class p018_sol2 {
 		// int[] ary = {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6};
 		// int[] ary = {0,0,0};
 		//int[] ary = { 1, 0, -1, 0, -2, 2 };
-		int[] ary = {-3,-2,-1,0,0,1,2,3};
+		int[] ary = {-1, 0, 0, 2};
 		//int[] ary = {-5,5,4,-3,0,0,4,-2};
 		for (List<Integer> temp : new p018_sol2().fourSum3(ary, 0)) {
 			System.out.println(temp);

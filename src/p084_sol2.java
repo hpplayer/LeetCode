@@ -18,12 +18,16 @@ import java.util.*;
  */
 
 public class p084_sol2 {
+	public static void main(String[] args){
+		List<Integer> heights= Arrays.asList(new Integer[] {2,0,2});
+		new p084_sol2().largestRectangleArea(heights);
+	}
     public int largestRectangleArea(List<Integer> height) {
         int size = height.size();
         Stack<Integer> stack = new Stack<Integer>();//stack store the index of non-descending bars 
         int result = 0;
         for(int i = 0; i <= size; i++){//we handle right boundary case by adding 0 in index size
-            int newBar = i== size? 0 : height.get(i);//if we reach the end of list, we just add dummy bar of height 0
+            int newBar = i== size? -1 : height.get(i);//if we reach the end of list, we just add dummy bar of height 0
             if(stack.isEmpty() || newBar >= height.get(stack.peek())){//if we get a new non-descending bard
                 stack.push(i);
             }else{//if we get a lower bar, then we can match it with other bars in the stack
@@ -38,6 +42,8 @@ public class p084_sol2 {
                 i--;//keep i stay until we face some bars in stack that is smaller than bar in index i;
             }
         }
+        
+        System.out.println(stack);
         return result;
     }
 }

@@ -44,7 +44,7 @@ public class p068_sol2 {
         List<String> result = new ArrayList<String>();
         //j is the index of new start
         for(int i = 0, j; i < words.length; i = j){
-            int len = -1;//we will append space after each word, -1 is to avoid the last word in line
+            int len = -1;//we will append space after each word, -1 is to handle the last word in line
             //calculate how many words we can squeeze into a line (the length include the space after it)
             for(j = i; j < words.length && len + words[j].length() + 1<= maxWidth; j++){
                 len += words[j].length() + 1;

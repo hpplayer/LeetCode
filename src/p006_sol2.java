@@ -14,6 +14,8 @@
  * 3 5   9 (gap1: 2*(4-1-2) = 2, gap2: 2*2 = 4)
  * 4     10(no gap1, gap2: 2*3 = 6)
  * 
+ * Remark:
+ * actually, we can look each subpart as a square! So the height and length are all same which is numRows
  * @author hpPlayer
  * @date Jul 17, 2015 3:53:23 PM
  */

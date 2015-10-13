@@ -18,7 +18,7 @@
 public class p135_sol2 {
     public int candy(int[] ratings) {
         int result = 1;//our loop start from index 1, so we treat index 0 as candy 1
-        int prev = 1;//record previous candy, since candy must >= 1, so inital value is 1
+        int prev = 1;//record previous peak, since candy must >= 1, so inital value is 1
         int desLen = 0;//record descend length
         
         for(int i = 1; i < ratings.length; i++){
@@ -37,7 +37,7 @@ public class p135_sol2 {
                     //because we have much more less nodes in right, then we need to update (increase) the peak
                     //Plus if the peak should always be higher than the start of descending, so even prev==desLen
                     //we still need to update the height
-                    if(desLen >= prev){
+                    if(desLen >= prev){//or desLen + 1 > prev, i.e. if we need to update peak
                         result += desLen + 1 - prev;//prev is the peak, desLen + 1 is the new peak we need
                     }
                     

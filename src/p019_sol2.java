@@ -1,6 +1,6 @@
 /**
  * This is my second algorithm, which is one pass. AC solution without help.
- * I treat it as same as p63, where I create a cycle, so we can handle boundary case like target node is the head
+ * I treat it as same as p61, where I create a cycle, so we can handle boundary case like target node is the head
  * Since we created a cycle, we need decide where to cut. The position can either be tail, head or mid.
  * Doing problem in this way may not be the best, since the logic is not so clear, so it is not recommended. 
  * Refer to sol3 and sol4 for more good solution

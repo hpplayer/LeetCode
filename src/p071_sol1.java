@@ -65,7 +65,8 @@ In this case, you should ignore redundant slashes and return "/home/foo".
 public class p071_sol1 {
 	public static void main(String[] args){
 		//String path = "/";
-		String path = "/a/./b///../c/../././../d/..//../e/./f/./g/././//.//h///././/..///";//should output /e/f/g
+		String path = "/....../c/..";
+		//String path = "/a/./b///../c/../././../d/..//../e/./f/./g/././//.//h///././/..///";//should output /e/f/g
 		//String path = "/..";
 		//String path = "/a/./b/../../c/";  //output "/.."
 		//String path = "/abc/...";
@@ -77,7 +78,7 @@ public class p071_sol1 {
         Stack<String> stack = new Stack<String>();//stack will only contain directory
         for(int i = 0; i < path.length(); i++){
         	//System.out.println(stack);
-        	if(path.charAt(i) == '/'){//we will stop at each directory seperator
+        	//if(path.charAt(i) == '/'){//we will stop at each directory seperator
         		StringBuilder temp = new StringBuilder();
         		while(i+1 <= path.length() - 1 && path.charAt(i+1) != '/'){//don't reach tail, and we search string before next "/"
         			i++;//move pointer
@@ -94,7 +95,7 @@ public class p071_sol1 {
         				stack.push(temp.toString());
         			}
         		}
-        	}
+        	//}
         }
 
         StringBuilder result = new StringBuilder();

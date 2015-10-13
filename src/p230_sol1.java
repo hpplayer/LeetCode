@@ -34,6 +34,12 @@ The optimal runtime complexity is O(height of BST).
  * sol3 is another recursive solution with short code but using additional helper method
  * sol4 is python version of sol3 
  * sol5 is python version of sol2
+ * 
+ * All above solutions run in O(n) time, i.e. if k = n, then we have to traversal all nodes in tree to find the target node.
+ * But if we can modify the tree structure, then we can add left count to each node, thus if left count in current node is k - 1
+ * then we know current node will be the kth smallest node, else if k < left count, we search left, else if k > left count 
+ * we will search (k - (left count + 1)) in right tree. The time complexity in this algorithm will be O(h) where h is the height of tree
+ *  
  * @author hpPlayer
  * @date Aug 14, 2015 2:05:00 AM
  */

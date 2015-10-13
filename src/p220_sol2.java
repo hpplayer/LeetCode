@@ -10,7 +10,8 @@ import java.util.Map;
  * should be -4 in previous bucket 5 in current bucket and +4 in next bucket. Thus we may also got same values in previous and next
  * buckets but out of this -4,5,4 range, so for these two buckets we need check the value, but for current bucket the value is guaranteed
  * to be duplicate
- * 3) The key point is how to get the correct bucket size, and assigning values into those buckets. For this problem, this bucket size must only be t or t + 1
+ * 3) The key point is how to get the correct bucket size, and assigning values into those buckets. For this problem, this bucket size must
+ * only be t or t + 1
  * if t+2, then one bucket may contain 2 numbers; if t-1, then bucket[i] and bucket[i+2] may contain a pair of number, whose distance is t
  * we choose t + 1, so that when we calculate the bucket number by n/(t+1) and avoid the case t = 0
  * 

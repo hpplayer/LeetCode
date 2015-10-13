@@ -16,6 +16,7 @@ public class p085_sol2 {
 		System.out.println(maximalRectangle(matrix));
 	}
 	public static int maximalRectangle(char[][] matrix) {
+		if(matrix.length == 0) return 0;
 		int m = matrix.length, n = matrix[0].length;
 		int[][] hisMatrix = new int[m][n];//matrix store bar height
 		
@@ -23,7 +24,7 @@ public class p085_sol2 {
 			for(int j = 0; j < n; j++){
 				if(matrix[i][j] == '1'){
 					hisMatrix[i][j] = 1;
-					for(int z = i-1; z >= 0; z--){
+					for(int z = i-1; z >= 0; z--){//use loop will cause LTE, just use the value above it
 						if(matrix[z][j] == '1'){
 							hisMatrix[i][j]++;//or hisMatrix[i][j] = hisMatrix[i-1][j] +1, use DP
 						}else{

@@ -2,7 +2,7 @@ import java.util.Arrays;
 /**
  * This is DP solution.
  * The key idea is to create the left and right array that records the max left and right height on current index
- * We firstly two arrays left and right
+ * We firstly create two arrays left and right
  * Then begin fill two arrays by using DP approach, i.e. array[i] = Math.max(height[i], array[i+/-1])
  * So after the loop is done, we have collected all information on each index regarding the left and right limits
  * Next step is to calculating the sum.

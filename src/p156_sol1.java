@@ -67,8 +67,18 @@ public class p156_sol1 {
 			val = x;
 		}
 	}
-
     public TreeNode upsideDownBinaryTree(TreeNode root) {
+        if(root == null) return root;
+        if(root.left == null) return root;
+        
+        TreeNode newHead = upsideDownBinaryTree(root.left);
+        root.left.left = root.right;
+        root.left.right = root;
+        
+        return newHead;
+    }
+    
+    public TreeNode upsideDownBinaryTree2(TreeNode root) {
         TreeNode parent = null, parentRight = null, curr = root;
         while(curr != null){
             TreeNode left = curr.left;//next curr Node

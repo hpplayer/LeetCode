@@ -59,6 +59,11 @@ public class p036_sol2 {
 	static char[][] board = {a,b,c,d,e,f,g,h,i};
 	
 	public static void main(String[] args){
+		boolean a = false;
+		boolean b = false;
+		a = b = true;
+		System.out.println(a);
+		System.out.println(b);
 		System.out.println(isValidSudoku(board));
 		for(int i = 0; i < board.length; i++){
 			System.out.println(Arrays.toString(board[i]));

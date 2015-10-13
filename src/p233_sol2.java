@@ -5,13 +5,13 @@
  * we look at hundred bit, which is 4 now
  * we have 123 before it, so we can guarantee there will be 123 times 1 in hundred bit
  * we also have 4 in hundred bit, so there will be 123 + 1 = 124 times 1 in hundred bit
- * Notice: what we talk above is the streak, each streak has 100 times 1 in hundred bit, its like 100->101->...->999, 100 times 1 in hundred
+ * Notice: what we talk above is the streak, each streak has 100 times 1 in hundred bit, its like 100->101->...->199, 100 times 1 in hundred
  * So there would be 124 times streak in hundred bit, each streak contains 100 times 1 in hundred bit, can be written as 100*124
  * 
  * we look at tenth bit, which is 5 now
  * we have 1234 before it, so we can guarantee there will be 1234 times 1 in tenth bit
  * we also have 5 in tenth bit, so there will be 1234 + 1 = 1235 times 1 in tenth bit
- * Notice: what we talk above is the streak, each streak has 10 times 1 in tenth bit, its like 10->11->...->99, 10 times 1 in tenth
+ * Notice: what we talk above is the streak, each streak has 10 times 1 in tenth bit, its like 10->11->...->19, 10 times 1 in tenth
  * So there would be 1235 times streak in tenth bit, each streak contains 10 times 1 in tenth bit, can be written as 10*1235
  * 
  * EX2: 123156, we look at hundred bit, which is 1 now
