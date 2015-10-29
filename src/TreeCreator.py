@@ -45,7 +45,7 @@ def drawtree(root):
 
 if __name__ == '__main__':
     #drawtree(deserialize('{1,#,3,2}'))
-    drawtree(deserialize('{6,2,8,0,4,7,9,#,#,3,5}'))
+    drawtree(deserialize('{2,#,3,2,#,1}'))
     #drawtree(deserialize('{2,1,3,0,7,9,1,2,#,1,0,#,#,8,8,#,#,#,#,7}'))
     
     """test tuple"""

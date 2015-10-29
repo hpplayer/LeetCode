@@ -41,7 +41,7 @@ public class p164_sol2 {
             max = Math.max(num, max);
         }
         
-        while(max/exp >0){//while we still have digits left (most siginficant digits)
+        while(max/exp >0){//while we still have digits left (most significant digits)
             int[] count = new int[10];//the array to sort each digit
             
             for(int i = 0; i < nums.length; i++){
@@ -52,7 +52,7 @@ public class p164_sol2 {
                 count[i] += count[i-1];//build index for each number, (rightshift i by nums  of i-1 in front)
             }
             
-            //we have to update the array backward, why? Since the eariler the num get index, the higher 
+            //we have to update the array backward, why? Since the earlier the num get index, the higher 
             //index it will get, which means it is larger, so of course, we want put larger number with higher
             //index thus we want to visit them first
             for(int i = nums.length -1; i >= 0; i--){

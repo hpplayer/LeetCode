@@ -23,10 +23,12 @@ public class p114_sol1 {
 		TreeNode a = new TreeNode(1);
 		TreeNode b = new TreeNode(2);
 		TreeNode c = new TreeNode(3);
-		//TreeNode d = new TreeNode(4);
-		//TreeNode e = new TreeNode(5);
+		TreeNode d = new TreeNode(4);
+		TreeNode e = new TreeNode(5);
 		a.left = b;
-		b.right= c;
+		b.left= c;
+		c.left = d;
+		d.left = e;
 		//a.right = e;
 		//b.left = c;
 		//b.right = d;

@@ -69,7 +69,7 @@ import java.util.Arrays;
 public class p214_sol2 {
 	public static void main(String[] args){
 		//System.out.println('\0');
-		System.out.println(new p214_sol2().shortestPalindrome("ababababd"));
+		System.out.println(new p214_sol2().shortestPalindrome("aacecaaa"));
 	}
     //KMP algorithm
     public String shortestPalindrome(String s) {
